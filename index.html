@@ -7,187 +7,133 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f172a;
-      color: white;
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0b1120;
+      color: #e2e8f0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 60px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .nav a {
+      color: #94a3b8;
+      margin-left: 20px;
+      text-decoration: none;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 100px 20px;
     }
 
     h1 {
-      font-size: 48px;
-    }
-
-    h2 {
-      margin-top: 60px;
-      color: #38bdf8;
+      font-size: 56px;
+      line-height: 1.2;
+      max-width: 800px;
     }
 
     p {
-      color: #cbd5e1;
+      color: #94a3b8;
       font-size: 18px;
+      max-width: 600px;
     }
 
     .btn {
+      margin-top: 30px;
       display: inline-block;
-      margin-top: 25px;
-      padding: 12px 22px;
       background: #2563eb;
-      color: white;
-      text-decoration: none;
+      padding: 14px 24px;
       border-radius: 6px;
+      text-decoration: none;
+      color: white;
     }
 
-    .section {
-      margin-top: 80px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap: 20px;
+      margin-top: 40px;
     }
 
-    .box {
-      background: #1e293b;
+    .card {
+      background: #111827;
       padding: 25px;
-      border-radius: 12px;
-      transition: 0.3s;
+      border-radius: 10px;
+      border: 1px solid #1f2937;
     }
 
-    .box:hover {
-      transform: translateY(-6px);
+    h2 {
+      margin-top: 80px;
+      font-size: 28px;
     }
+
   </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<div style="background:#020617;padding:18px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1e293b;">
-  <div style="font-weight:600;font-size:18px;">Sent Risk Advisory</div>
+<div class="nav">
+  <div><b>Sent Risk Advisory</b></div>
   <div>
-    <a href="index.html" style="color:#cbd5e1;margin-right:20px;text-decoration:none;">Home</a>
-    <a href="services.html" style="color:#cbd5e1;margin-right:20px;text-decoration:none;">Services</a>
-    <a href="about.html" style="color:#cbd5e1;margin-right:20px;text-decoration:none;">About</a>
-    <a href="contact.html" style="color:#cbd5e1;text-decoration:none;">Contact</a>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- HERO -->
-  <h1>Engineering Clarity in High-Stakes Decisions</h1>
+  <h1>Engineering clarity in high-stakes decisions</h1>
+
   <p>
     We help businesses navigate uncertainty, structure complex risks,
     and make confident strategic decisions where outcomes matter most.
   </p>
-  <a class="btn" href="mailto:info@sent.co.in">Request Consultation</a>
 
-  <!-- SERVICES -->
-  <div class="section">
-    <h2>What We Do</h2>
+  <a class="btn" href="mailto:info@sent.co.in">Start a Conversation</a>
 
-    <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:20px;">
+  <h2>What We Do</h2>
 
-      <div class="box" style="flex:1; min-width:250px;">
-        <h3>Risk Advisory</h3>
-        <p>Identify and manage business risks before they impact outcomes.</p>
-      </div>
+  <div class="grid">
+    <div class="card">
+      <h3>Risk Advisory</h3>
+      <p>Identify and manage business risks before they impact outcomes.</p>
+    </div>
 
-      <div class="box" style="flex:1; min-width:250px;">
-        <h3>Decision Consulting</h3>
-        <p>Structured frameworks to support high-stakes decision-making.</p>
-      </div>
+    <div class="card">
+      <h3>Decision Consulting</h3>
+      <p>Structured frameworks for high-stakes decisions.</p>
+    </div>
 
-      <div class="box" style="flex:1; min-width:250px;">
-        <h3>Strategic Analysis</h3>
-        <p>Deep insights to guide long-term business direction.</p>
-      </div>
-
+    <div class="card">
+      <h3>Strategic Analysis</h3>
+      <p>Deep insights for long-term business direction.</p>
     </div>
   </div>
 
-  <!-- APPROACH -->
-  <div class="section">
-    <h2>Our Approach</h2>
-    <p>
-      We combine analytical rigor with practical insight to simplify complex problems.
-      Our focus is not just on identifying risks, but enabling better decisions.
-    </p>
-  </div>
+  <h2>Why Choose Us</h2>
 
-  <!-- ABOUT -->
-  <div class="section">
-    <h2>About</h2>
-    <p>
-      Sent Risk Advisory helps businesses make better decisions under uncertainty
-      through structured analysis and risk evaluation.
-    </p>
-  </div>
-
-  <!-- WHY CHOOSE US -->
-  <div class="section">
-    <h2>Why Choose Us</h2>
-<div class="section">
-  <h2>Who We Work With</h2>
-
-  <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:20px;">
-
-    <div class="box" style="flex:1; min-width:250px;">
-      <h3>Growing Businesses</h3>
-      <p>Companies facing complex decisions during expansion or transition phases.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Structured Thinking</h3>
+      <p>Clarity through disciplined frameworks.</p>
     </div>
 
-    <div class="box" style="flex:1; min-width:250px;">
-      <h3>Decision-Makers</h3>
-      <p>Founders and leaders handling high-impact strategic or financial decisions.</p>
+    <div class="card">
+      <h3>Decision Focus</h3>
+      <p>We enable better decisions, not just analysis.</p>
     </div>
 
-    <div class="box" style="flex:1; min-width:250px;">
-      <h3>Uncertain Environments</h3>
-      <p>Businesses operating under ambiguity, risk, or rapidly changing conditions.</p>
+    <div class="card">
+      <h3>Practical Approach</h3>
+      <p>Actionable outcomes, not theory.</p>
     </div>
-
-  </div>
-</div>
-    <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:20px;">
-
-      <div class="box" style="flex:1; min-width:250px;">
-        <h3>Structured Thinking</h3>
-        <p>Clarity through disciplined frameworks.</p>
-      </div>
-
-      <div class="box" style="flex:1; min-width:250px;">
-        <h3>Decision Focus</h3>
-        <p>We enable better decisions, not just insights.</p>
-      </div>
-
-      <div class="box" style="flex:1; min-width:250px;">
-        <h3>Practical Approach</h3>
-        <p>Actionable outcomes, not theory.</p>
-      </div>
-
-    </div>
-  </div>
-<div class="section" style="text-align:center;">
-
-  <h2>Facing a Critical Decision?</h2>
-
-  <p style="max-width:600px; margin:auto;">
-    If you're navigating uncertainty or evaluating a high-stakes decision,
-    we can help bring clarity, structure, and confidence to the process.
-  </p>
-
-  <a class="btn" href="mailto:info@sent.co.in" style="margin-top:30px;">
-    Start a Conversation
-  </a>
-
-</div>
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Get in Touch</h2>
-    <p>If you are facing a complex business decision, we can help.</p>
-    <a class="btn" href="mailto:info@sent.co.in">Contact Us</a>
   </div>
 
 </div>
