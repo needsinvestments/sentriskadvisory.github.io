@@ -8,71 +8,58 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fb;
+      background: #f4f5f7;
       color: #1f2937;
+      line-height: 1.7;
     }
 
     .nav {
       display: flex;
       justify-content: space-between;
-      padding: 20px 50px;
-      background: white;
+      padding: 20px 60px;
+      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
     }
 
     .nav a {
-      margin-left: 20px;
+      margin-left: 25px;
       text-decoration: none;
       color: #4b5563;
+      font-size: 14px;
     }
 
-    .hero {
-      padding: 100px 50px;
-      background: linear-gradient(to right, #ffffff, #eef2f7);
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
     }
 
-    .hero h1 {
-      font-size: 48px;
-      max-width: 700px;
+    h1 {
+      font-size: 38px;
+      margin-bottom: 20px;
     }
 
-    .hero p {
-      max-width: 600px;
-      margin-top: 20px;
-      color: #6b7280;
+    p {
+      color: #4b5563;
+      font-size: 18px;
     }
 
-    .btn {
-      display: inline-block;
+    .section {
+      margin-top: 70px;
+    }
+
+    .block {
       margin-top: 25px;
-      padding: 12px 22px;
+    }
+
+    .cta {
+      margin-top: 40px;
+      display: inline-block;
+      padding: 12px 20px;
       background: #111827;
       color: white;
       text-decoration: none;
       border-radius: 6px;
-    }
-
-    .section {
-      padding: 80px 50px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .image-banner {
-      height: 300px;
-      background: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a') center/cover;
     }
 
   </style>
@@ -90,33 +77,48 @@
   </div>
 </div>
 
-<div class="hero">
-  <h1>Clarity in Decisions. Confidence in Outcomes.</h1>
-  <p>We help businesses navigate risk, structure complex decisions, and act with clarity in uncertain environments.</p>
-  <a class="btn" href="contact.html">Start a Conversation</a>
-</div>
+<div class="container">
 
-<div class="image-banner"></div>
+  <h1>Clarity in decisions where uncertainty is real and outcomes matter.</h1>
 
-<div class="section">
-  <h2>What We Do</h2>
+  <p>
+    Sent Risk Advisory works with businesses facing complex choices —
+    where information is incomplete, risks are not obvious,
+    and decisions carry meaningful consequences.
+  </p>
 
-  <div class="grid">
-    <div class="card">
-      <h3>Risk Advisory</h3>
-      <p>Understand and manage risk before it impacts your business.</p>
+  <a class="cta" href="contact.html">Start a Conversation</a>
+
+  <div class="section">
+    <h2>What We Do</h2>
+
+    <div class="block">
+      <p><b>Risk Advisory</b> — Understanding and structuring risk before it impacts outcomes.</p>
     </div>
 
-    <div class="card">
-      <h3>Decision Consulting</h3>
-      <p>Structure complex decisions with clarity and confidence.</p>
+    <div class="block">
+      <p><b>Decision Consulting</b> — Bringing clarity to high-stakes decisions.</p>
     </div>
 
-    <div class="card">
-      <h3>Strategic Analysis</h3>
-      <p>Insight-driven support for long-term direction.</p>
+    <div class="block">
+      <p><b>Strategic Analysis</b> — Supporting long-term direction with disciplined thinking.</p>
     </div>
   </div>
+
+  <div class="section">
+    <h2>How We Work</h2>
+
+    <p>
+      Our focus is not on producing more analysis.
+      It is on improving the quality of thinking behind decisions.
+    </p>
+
+    <p>
+      We break down complexity, clarify trade-offs,
+      and bring structure where ambiguity dominates.
+    </p>
+  </div>
+
 </div>
 
 </body>
