@@ -23,6 +23,7 @@
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
+      z-index: 1000;
     }
 
     .brand {
@@ -32,13 +33,12 @@
     }
 
     .brand img {
-      height: 75px; /* INCREASED */
+      height: 75px;
     }
 
     .brand-name {
-      font-size: 24px; /* INCREASED */
+      font-size: 24px;
       font-weight: 700;
-      letter-spacing: 0.3px;
     }
 
     .tagline {
@@ -56,6 +56,10 @@
 
     /* HERO */
     .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 40px;
+      align-items: center;
       padding: 80px 60px 60px;
       background: white;
       max-width: 1100px;
@@ -81,6 +85,12 @@
       color: white;
       border-radius: 6px;
       text-decoration: none;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
     /* SECTION FLOW */
@@ -142,18 +152,26 @@
 
 <!-- HERO -->
 <div class="hero">
-  <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
 
-  <p>
-    Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory and insurance solutions across industries.
-  </p>
+  <div>
+    <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
 
-  <p>
-    We approach insurance not as a product, but as a framework for managing uncertainty,
-    aligning coverage with real business exposure and long-term continuity.
-  </p>
+    <p>
+      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory and insurance solutions across industries.
+    </p>
 
-  <a class="cta" href="contact.html">Discuss Your Requirement</a>
+    <p>
+      We approach insurance not as a product, but as a framework for managing uncertainty,
+      aligning coverage with real business exposure and long-term continuity.
+    </p>
+
+    <a class="cta" href="contact.html">Discuss Your Requirement</a>
+  </div>
+
+  <div>
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
+  </div>
+
 </div>
 
 <!-- VISION -->
