@@ -1,55 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact - Sent Risk Advisory</title>
+  <title>Contact | Sent Risk Advisory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
-      font-family: Arial;
-      background:#0f172a;
-      color:white;
-      padding:40px;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 60px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 14px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .subtext {
+      color: #6b7280;
+      max-width: 600px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-top: 50px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      border: 1px solid #e5e7eb;
     }
 
     input, textarea {
-      width:100%;
-      padding:10px;
-      margin-top:10px;
-      margin-bottom:20px;
-      border-radius:5px;
-      border:none;
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-family: inherit;
     }
 
     button {
-      background:#2563eb;
-      color:white;
-      padding:10px 20px;
-      border:none;
-      border-radius:5px;
-      cursor:pointer;
+      background: #111827;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
+
+    .info p {
+      margin-top: 15px;
+      color: #4b5563;
+    }
+
   </style>
 </head>
 
 <body>
+
+<!-- HEADER -->
 <div class="nav">
-  
-  <!-- BRAND -->
+
   <div style="display:flex; align-items:center; gap:14px;">
-    
-    <img src="logo.png" style="height:60px; object-fit:contain;">
-
+    <img src="logo.png" style="height:60px;">
     <div>
-      <div style="font-weight:600; font-size:18px; line-height:1;">
-        Sent Risk Advisory
-      </div>
-      <div style="font-size:12px; color:#6b7280; margin-top:4px;">
-        Engineering Critical Decisions
-      </div>
+      <div style="font-weight:600; font-size:18px;">Sent Risk Advisory</div>
+      <div style="font-size:12px; color:#6b7280;">Engineering Critical Decisions</div>
     </div>
-
   </div>
 
-  <!-- NAV -->
   <div>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -58,22 +106,60 @@
   </div>
 
 </div>
-<h1>Contact Us</h1>
 
-<form action="mailto:info@sent.co.in" method="post" enctype="text/plain">
+<!-- CONTENT -->
+<div class="container">
 
-  <label>Name</label>
-  <input type="text" name="name" required>
+  <h1>Contact Us</h1>
 
-  <label>Email</label>
-  <input type="email" name="email" required>
+  <p class="subtext">
+    If you are evaluating insurance requirements or need structured advisory on risk,
+    please reach out. We will get back to you with a considered response.
+  </p>
 
-  <label>Business Requirement</label>
-  <textarea name="message" rows="5" required></textarea>
+  <div class="grid">
 
-  <button type="submit">Submit</button>
+    <!-- FORM -->
+    <div class="card">
+      <h3>Send a Message</h3>
 
-</form>
+      <form action="mailto:services@sent.co.in" method="post" enctype="text/plain">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Requirement</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+
+      </form>
+    </div>
+
+    <!-- CONTACT DETAILS -->
+    <div class="card info">
+      <h3>Contact Details</h3>
+
+      <p><b>Address:</b><br>
+      Level 3, Nirvanaz, Road No. 36,<br>
+      Above JEEP Showroom,<br>
+      Jubilee Hills, Hyderabad,<br>
+      Telangana 500033</p>
+
+      <p><b>Phone:</b><br>
+      6304-128-122</p>
+
+      <p><b>Email:</b><br>
+      services@sent.co.in</p>
+
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 </html>
