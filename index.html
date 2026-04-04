@@ -7,10 +7,10 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Segoe UI', system-ui, sans-serif;
       background: #f4f6f8;
       color: #1f2937;
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
     /* NAV */
@@ -23,12 +23,35 @@
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
+      z-index: 1000;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand img {
+      height: 65px; /* INCREASED */
+    }
+
+    .brand-name {
+      font-weight: 700;
+      font-size: 20px; /* INCREASED */
+      letter-spacing: 0.3px;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 4px;
     }
 
     .nav a {
-      margin-left: 25px;
+      margin-left: 28px;
       text-decoration: none;
-      color: #4b5563;
+      color: #374151;
       font-size: 14px;
     }
 
@@ -37,28 +60,33 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       align-items: center;
-      padding: 80px 60px;
+      padding: 85px 60px;
       background: white;
-      gap: 40px;
+      gap: 50px;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 46px;
+      line-height: 1.2;
+      font-weight: 600;
     }
 
     .hero p {
-      margin-top: 15px;
+      margin-top: 18px;
       color: #6b7280;
+      max-width: 620px;
+      font-size: 16px;
     }
 
     .cta {
-      margin-top: 25px;
+      margin-top: 28px;
       display: inline-block;
-      padding: 12px 20px;
+      padding: 13px 22px;
       background: #111827;
       color: white;
       border-radius: 6px;
       text-decoration: none;
+      font-size: 14px;
     }
 
     .hero img {
@@ -68,14 +96,10 @@
 
     /* SECTIONS */
     .section {
-      padding: 60px 60px;
-      max-width: 1100px;
+      padding: 55px 60px;
+      max-width: 1050px;
       margin: auto;
       border-top: 1px solid #e5e7eb;
-    }
-
-    .section:first-of-type {
-      border-top: none;
     }
 
     .section.alt {
@@ -84,34 +108,41 @@
     }
 
     h2 {
-      font-size: 28px;
-      margin-bottom: 15px;
+      font-size: 30px;
+      font-weight: 600;
+      margin-bottom: 12px;
     }
 
     .sub {
       color: #6b7280;
       margin-top: 10px;
       max-width: 750px;
+      font-size: 15.5px;
     }
 
     /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 25px;
+      gap: 22px;
       margin-top: 25px;
     }
 
     .card {
-      padding: 25px;
+      padding: 22px;
       background: white;
-      border-radius: 10px;
+      border-radius: 8px;
       border: 1px solid #e5e7eb;
-      transition: 0.2s;
     }
 
-    .card:hover {
-      transform: translateY(-3px);
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .card p {
+      font-size: 14.5px;
+      color: #6b7280;
     }
 
   </style>
@@ -121,11 +152,12 @@
 
 <!-- NAV -->
 <div class="nav">
-  <div style="display:flex; align-items:center; gap:12px;">
-    <img src="logo.png" style="height:50px;">
+
+  <div class="brand">
+    <img src="logo.png">
     <div>
-      <div style="font-weight:600;">Sent Risk Advisory</div>
-      <div style="font-size:12px; color:#6b7280;">Engineering Critical Decisions</div>
+      <div class="brand-name">Sent Risk Advisory</div>
+      <div class="tagline">Engineering Critical Decisions</div>
     </div>
   </div>
 
@@ -135,19 +167,21 @@
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
+
 </div>
 
 <!-- HERO -->
 <div class="hero">
+
   <div>
     <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
 
     <p>
-      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory solutions.
+      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory solutions across industries.
     </p>
 
     <p>
-      We align insurance with real business exposure — ensuring clarity, relevance and long-term protection.
+      We approach insurance as a framework for managing uncertainty — aligning coverage with real exposure and long-term continuity.
     </p>
 
     <a class="cta" href="contact.html">Discuss Your Requirement</a>
@@ -156,6 +190,7 @@
   <div>
     <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
   </div>
+
 </div>
 
 <!-- VISION -->
@@ -167,7 +202,7 @@
   </p>
 
   <p class="sub">
-    We believe insurance must move beyond transactional placement into a framework for protecting continuity and financial stability.
+    We believe insurance must evolve beyond transactional placement into a framework for protecting continuity and financial stability.
   </p>
 </div>
 
@@ -176,14 +211,14 @@
   <h2>Core Capabilities</h2>
 
   <p class="sub">
-    Our approach focuses on understanding risk deeply and aligning coverage with real business needs.
+    Our work focuses on improving how risk is understood, evaluated and protected — ensuring alignment with real business needs.
   </p>
 
   <div class="grid">
-    <div class="card"><h3>Risk Assessment</h3><p>Understanding real exposure across operations.</p></div>
-    <div class="card"><h3>Insurance Advisory</h3><p>Independent and structured advisory.</p></div>
-    <div class="card"><h3>Policy Structuring</h3><p>Designing aligned coverage frameworks.</p></div>
-    <div class="card"><h3>Placement & Support</h3><p>Execution and ongoing coordination.</p></div>
+    <div class="card"><h3>Risk Assessment</h3><p>Understanding exposure across operations and assets.</p></div>
+    <div class="card"><h3>Insurance Advisory</h3><p>Independent, structured advisory aligned to needs.</p></div>
+    <div class="card"><h3>Policy Structuring</h3><p>Designing coverage frameworks that reflect risk.</p></div>
+    <div class="card"><h3>Placement & Support</h3><p>Execution with continuity and coordination.</p></div>
   </div>
 </div>
 
@@ -192,13 +227,13 @@
   <h2>Who We Serve</h2>
 
   <p class="sub">
-    We work with clients across different scales who require structured and reliable insurance solutions.
+    We work with clients across varying scales who require structured and reliable insurance solutions.
   </p>
 
   <div class="grid">
-    <div class="card"><h3>Corporates</h3><p>Comprehensive enterprise-level coverage.</p></div>
-    <div class="card"><h3>SMEs</h3><p>Practical and cost-efficient programs.</p></div>
-    <div class="card"><h3>HNI Clients</h3><p>Structured personal protection planning.</p></div>
+    <div class="card"><h3>Corporates</h3><p>Enterprise-level structured risk coverage.</p></div>
+    <div class="card"><h3>SMEs</h3><p>Practical and scalable insurance programs.</p></div>
+    <div class="card"><h3>HNI Clients</h3><p>Structured personal financial protection.</p></div>
   </div>
 </div>
 
