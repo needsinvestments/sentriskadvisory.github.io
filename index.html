@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #ffffff;
+      background: #f4f6f8;
       color: #1f2937;
       line-height: 1.7;
     }
@@ -16,8 +16,14 @@
     .nav {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 20px 60px;
+      background: white;
       border-bottom: 1px solid #e5e7eb;
+    }
+
+    .nav img {
+      height: 40px;
     }
 
     .nav a {
@@ -28,23 +34,23 @@
     }
 
     .hero {
-      padding: 90px 60px;
-      background: #f4f6f8;
+      padding: 80px 60px;
+      background: white;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 40px;
       max-width: 800px;
     }
 
     .hero p {
-      max-width: 650px;
+      max-width: 700px;
       margin-top: 20px;
       color: #6b7280;
     }
 
     .cta {
-      margin-top: 30px;
+      margin-top: 25px;
       display: inline-block;
       padding: 12px 22px;
       background: #111827;
@@ -55,7 +61,7 @@
 
     .section {
       padding: 70px 60px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
 
@@ -69,12 +75,16 @@
     .card {
       padding: 25px;
       border: 1px solid #e5e7eb;
-      border-radius: 8px;
+      border-radius: 10px;
       background: #ffffff;
     }
 
     h2 {
-      margin-top: 20px;
+      font-size: 28px;
+    }
+
+    .icon {
+      font-size: 28px;
     }
 
   </style>
@@ -82,8 +92,11 @@
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
-  <div><b>Sent Risk Advisory</b></div>
+  <div>
+    <img src="logo.png"> <!-- upload your logo as logo.png -->
+  </div>
   <div>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -92,79 +105,81 @@
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Corporate Insurance & Risk Advisory Across Multiple Insurers</h1>
+  <h1>Sent Risk Advisory</h1>
+
+  <p><b>Engineering Critical Decisions in Insurance & Risk</b></p>
 
   <p>
-    Sent Risk Advisory operates as a group of IRDAI-licensed insurance professionals
-    under Sathya Axis Enterprises, providing structured advisory and placement
-    across insurance solutions for corporates, SMEs and HNI clients.
+    A corporate-focused insurance and risk advisory platform operating under
+    Sathya Axis Enterprises, bringing together IRDAI-licensed professionals
+    to deliver structured insurance solutions across industries.
   </p>
 
   <p>
-    We work across insurers and industries to design coverage aligned with
-    business risk, operational realities and long-term protection needs.
+    We work across multiple insurers to design, advise and place risk coverage
+    aligned with real business exposure — not just products.
   </p>
 
-  <a class="cta" href="contact.html">Discuss Your Requirements</a>
+  <a class="cta" href="contact.html">Discuss Your Requirement</a>
 </div>
 
+<!-- VISION -->
+<div class="section">
+  <h2>Our Vision</h2>
+
+  <p>
+    To build a disciplined and trusted insurance advisory platform that enables
+    businesses to make informed, structured and confident decisions on risk.
+  </p>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2>Core Capabilities</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">📊</div>
+      <h3>Risk Assessment</h3>
+      <p>Structured evaluation of operational, financial and asset risks.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🛡️</div>
+      <h3>Insurance Advisory</h3>
+      <p>Independent advisory across multiple insurers and policy structures.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📄</div>
+      <h3>Policy Structuring</h3>
+      <p>Designing coverage aligned with business exposure and risk profile.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤝</div>
+      <h3>Placement & Support</h3>
+      <p>End-to-end execution and insurer coordination.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CLIENTS -->
 <div class="section">
   <h2>Who We Serve</h2>
 
   <div class="grid">
-    <div class="card">
-      <h3>Corporates</h3>
-      <p>Startups to large organizations requiring structured risk coverage.</p>
-    </div>
-
-    <div class="card">
-      <h3>SMEs</h3>
-      <p>Businesses needing practical and cost-effective insurance solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>HNI Clients</h3>
-      <p>Individuals requiring tailored insurance planning and advisory.</p>
-    </div>
+    <div class="card"><h3>Corporates</h3><p>Startups to large enterprises across industries.</p></div>
+    <div class="card"><h3>SMEs</h3><p>Structured and cost-effective insurance solutions.</p></div>
+    <div class="card"><h3>HNI Clients</h3><p>Personalised insurance planning and advisory.</p></div>
   </div>
 </div>
 
-<div class="section">
-  <h2>What We Do</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Risk Assessment</h3>
-      <p>Understanding exposure across operations, assets and liabilities.</p>
-    </div>
-
-    <div class="card">
-      <h3>Insurance Advisory</h3>
-      <p>Guidance on selecting the right coverage across multiple insurers.</p>
-    </div>
-
-    <div class="card">
-      <h3>Policy Placement</h3>
-      <p>Execution and placement aligned to client requirements and risk profile.</p>
-    </div>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Our Approach</h2>
-
-  <p>
-    We operate independently across insurers, focusing on client requirements
-    rather than product pushing. Our role is to structure coverage that aligns
-    with actual risk, not just policy availability.
-  </p>
-
-  <p>
-    The emphasis is on clarity, relevance and long-term alignment.
-  </p>
-</div>
-
+<!-- REGULATORY -->
 <div class="section">
   <h2>Regulatory Context</h2>
 
