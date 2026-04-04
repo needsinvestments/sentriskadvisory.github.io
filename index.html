@@ -7,8 +7,8 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: #f4f6f8;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6f8;
       color: #1f2937;
       line-height: 1.75;
     }
@@ -23,7 +23,6 @@
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
-      z-index: 1000;
     }
 
     .brand {
@@ -33,17 +32,17 @@
     }
 
     .brand img {
-      height: 65px; /* INCREASED */
+      height: 75px; /* INCREASED */
     }
 
     .brand-name {
+      font-size: 24px; /* INCREASED */
       font-weight: 700;
-      font-size: 20px; /* INCREASED */
       letter-spacing: 0.3px;
     }
 
     .tagline {
-      font-size: 12px;
+      font-size: 13px;
       color: #6b7280;
       margin-top: 4px;
     }
@@ -51,73 +50,56 @@
     .nav a {
       margin-left: 28px;
       text-decoration: none;
-      color: #374151;
+      color: #4b5563;
       font-size: 14px;
     }
 
     /* HERO */
     .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      align-items: center;
-      padding: 85px 60px;
+      padding: 80px 60px 60px;
       background: white;
-      gap: 50px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .hero h1 {
-      font-size: 46px;
-      line-height: 1.2;
-      font-weight: 600;
+      font-size: 42px;
+      max-width: 800px;
     }
 
     .hero p {
       margin-top: 18px;
+      max-width: 650px;
       color: #6b7280;
-      max-width: 620px;
-      font-size: 16px;
     }
 
     .cta {
-      margin-top: 28px;
+      margin-top: 25px;
       display: inline-block;
-      padding: 13px 22px;
+      padding: 12px 20px;
       background: #111827;
       color: white;
       border-radius: 6px;
       text-decoration: none;
-      font-size: 14px;
     }
 
-    .hero img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* SECTIONS */
+    /* SECTION FLOW */
     .section {
-      padding: 55px 60px;
-      max-width: 1050px;
+      padding: 50px 60px;
+      max-width: 1100px;
       margin: auto;
       border-top: 1px solid #e5e7eb;
     }
 
-    .section.alt {
-      background: #ffffff;
-      border-top: none;
-    }
-
     h2 {
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
 
     .sub {
       color: #6b7280;
-      margin-top: 10px;
-      max-width: 750px;
-      font-size: 15.5px;
+      margin-top: 12px;
+      max-width: 800px;
     }
 
     /* GRID */
@@ -130,19 +112,9 @@
 
     .card {
       padding: 22px;
-      background: white;
-      border-radius: 8px;
       border: 1px solid #e5e7eb;
-    }
-
-    .card h3 {
-      font-size: 17px;
-      margin-bottom: 6px;
-    }
-
-    .card p {
-      font-size: 14.5px;
-      color: #6b7280;
+      border-radius: 8px;
+      background: white;
     }
 
   </style>
@@ -152,7 +124,6 @@
 
 <!-- NAV -->
 <div class="nav">
-
   <div class="brand">
     <img src="logo.png">
     <div>
@@ -167,30 +138,22 @@
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
-
 </div>
 
 <!-- HERO -->
 <div class="hero">
+  <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
 
-  <div>
-    <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
+  <p>
+    Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory and insurance solutions across industries.
+  </p>
 
-    <p>
-      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory solutions across industries.
-    </p>
+  <p>
+    We approach insurance not as a product, but as a framework for managing uncertainty,
+    aligning coverage with real business exposure and long-term continuity.
+  </p>
 
-    <p>
-      We approach insurance as a framework for managing uncertainty — aligning coverage with real exposure and long-term continuity.
-    </p>
-
-    <a class="cta" href="contact.html">Discuss Your Requirement</a>
-  </div>
-
-  <div>
-    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
-  </div>
-
+  <a class="cta" href="contact.html">Discuss Your Requirement</a>
 </div>
 
 <!-- VISION -->
@@ -198,27 +161,52 @@
   <h2>Our Vision</h2>
 
   <p class="sub">
-    To build a disciplined and credible insurance advisory platform that enables businesses to approach risk with clarity and structure.
+    To build a disciplined and credible insurance advisory platform that enables businesses
+    to approach risk with clarity, structure and long-term perspective.
   </p>
 
   <p class="sub">
-    We believe insurance must evolve beyond transactional placement into a framework for protecting continuity and financial stability.
+    In an environment where decisions are often made under uncertainty, we believe insurance
+    must evolve beyond transactional placement into a structured framework for protecting
+    business continuity and financial stability.
+  </p>
+
+  <p class="sub">
+    Our vision is to contribute meaningfully to this shift by improving decision quality,
+    aligning coverage with real exposure and building long-term trust in advisory-led insurance.
   </p>
 </div>
 
 <!-- CORE -->
-<div class="section alt">
+<div class="section">
   <h2>Core Capabilities</h2>
 
   <p class="sub">
-    Our work focuses on improving how risk is understood, evaluated and protected — ensuring alignment with real business needs.
+    Our work is centred on improving how risk is understood, evaluated and protected.
+    Every engagement is approached with a structured lens focused on relevance,
+    clarity and long-term alignment.
   </p>
 
   <div class="grid">
-    <div class="card"><h3>Risk Assessment</h3><p>Understanding exposure across operations and assets.</p></div>
-    <div class="card"><h3>Insurance Advisory</h3><p>Independent, structured advisory aligned to needs.</p></div>
-    <div class="card"><h3>Policy Structuring</h3><p>Designing coverage frameworks that reflect risk.</p></div>
-    <div class="card"><h3>Placement & Support</h3><p>Execution with continuity and coordination.</p></div>
+    <div class="card">
+      <h3>Risk Assessment</h3>
+      <p>Bringing visibility to risks that are often fragmented or underestimated.</p>
+    </div>
+
+    <div class="card">
+      <h3>Insurance Advisory</h3>
+      <p>Ensuring decisions are aligned with real business needs, not products.</p>
+    </div>
+
+    <div class="card">
+      <h3>Policy Structuring</h3>
+      <p>Designing coverage that reflects operational and contractual realities.</p>
+    </div>
+
+    <div class="card">
+      <h3>Placement & Support</h3>
+      <p>Ensuring continuity, coordination and effectiveness over time.</p>
+    </div>
   </div>
 </div>
 
@@ -227,26 +215,38 @@
   <h2>Who We Serve</h2>
 
   <p class="sub">
-    We work with clients across varying scales who require structured and reliable insurance solutions.
+    Our clients operate across varying scales and complexities, but share a common need —
+    structured, reliable and context-driven insurance solutions.
   </p>
 
   <div class="grid">
-    <div class="card"><h3>Corporates</h3><p>Enterprise-level structured risk coverage.</p></div>
-    <div class="card"><h3>SMEs</h3><p>Practical and scalable insurance programs.</p></div>
-    <div class="card"><h3>HNI Clients</h3><p>Structured personal financial protection.</p></div>
+    <div class="card">
+      <h3>Corporates</h3>
+      <p>Comprehensive risk coverage aligned with operational scale.</p>
+    </div>
+
+    <div class="card">
+      <h3>SMEs</h3>
+      <p>Balancing cost efficiency with adequate protection.</p>
+    </div>
+
+    <div class="card">
+      <h3>HNI Clients</h3>
+      <p>Structured financial protection and long-term planning.</p>
+    </div>
   </div>
 </div>
 
 <!-- REGULATORY -->
-<div class="section alt">
+<div class="section">
   <h2>Regulatory Context</h2>
 
   <p class="sub">
-    Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals.
+    Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals working across multiple insurers.
   </p>
 
   <p class="sub">
-    Our advisory remains aligned with regulatory standards while maintaining independence and transparency.
+    Our approach remains aligned with regulatory frameworks while maintaining an independent advisory perspective.
   </p>
 </div>
 
