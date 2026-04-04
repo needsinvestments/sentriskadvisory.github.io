@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f5f7;
+      background: #ffffff;
       color: #1f2937;
       line-height: 1.7;
     }
@@ -17,7 +17,6 @@
       display: flex;
       justify-content: space-between;
       padding: 20px 60px;
-      background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
     }
 
@@ -28,38 +27,54 @@
       font-size: 14px;
     }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 80px 20px;
+    .hero {
+      padding: 90px 60px;
+      background: #f4f6f8;
     }
 
-    h1 {
-      font-size: 38px;
-      margin-bottom: 20px;
+    .hero h1 {
+      font-size: 42px;
+      max-width: 800px;
     }
 
-    p {
-      color: #4b5563;
-      font-size: 18px;
-    }
-
-    .section {
-      margin-top: 70px;
-    }
-
-    .block {
-      margin-top: 25px;
+    .hero p {
+      max-width: 650px;
+      margin-top: 20px;
+      color: #6b7280;
     }
 
     .cta {
-      margin-top: 40px;
+      margin-top: 30px;
       display: inline-block;
-      padding: 12px 20px;
+      padding: 12px 22px;
       background: #111827;
       color: white;
       text-decoration: none;
       border-radius: 6px;
+    }
+
+    .section {
+      padding: 70px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .card {
+      padding: 25px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+
+    h2 {
+      margin-top: 20px;
     }
 
   </style>
@@ -77,48 +92,86 @@
   </div>
 </div>
 
-<div class="container">
-
-  <h1>Clarity in decisions where uncertainty is real and outcomes matter.</h1>
+<div class="hero">
+  <h1>Corporate Insurance & Risk Advisory Across Multiple Insurers</h1>
 
   <p>
-    Sent Risk Advisory works with businesses facing complex choices —
-    where information is incomplete, risks are not obvious,
-    and decisions carry meaningful consequences.
+    Sent Risk Advisory operates as a group of IRDAI-licensed insurance professionals
+    under Sathya Axis Enterprises, providing structured advisory and placement
+    across insurance solutions for corporates, SMEs and HNI clients.
   </p>
 
-  <a class="cta" href="contact.html">Start a Conversation</a>
+  <p>
+    We work across insurers and industries to design coverage aligned with
+    business risk, operational realities and long-term protection needs.
+  </p>
 
-  <div class="section">
-    <h2>What We Do</h2>
+  <a class="cta" href="contact.html">Discuss Your Requirements</a>
+</div>
 
-    <div class="block">
-      <p><b>Risk Advisory</b> — Understanding and structuring risk before it impacts outcomes.</p>
+<div class="section">
+  <h2>Who We Serve</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Corporates</h3>
+      <p>Startups to large organizations requiring structured risk coverage.</p>
     </div>
 
-    <div class="block">
-      <p><b>Decision Consulting</b> — Bringing clarity to high-stakes decisions.</p>
+    <div class="card">
+      <h3>SMEs</h3>
+      <p>Businesses needing practical and cost-effective insurance solutions.</p>
     </div>
 
-    <div class="block">
-      <p><b>Strategic Analysis</b> — Supporting long-term direction with disciplined thinking.</p>
+    <div class="card">
+      <h3>HNI Clients</h3>
+      <p>Individuals requiring tailored insurance planning and advisory.</p>
     </div>
   </div>
+</div>
 
-  <div class="section">
-    <h2>How We Work</h2>
+<div class="section">
+  <h2>What We Do</h2>
 
-    <p>
-      Our focus is not on producing more analysis.
-      It is on improving the quality of thinking behind decisions.
-    </p>
+  <div class="grid">
+    <div class="card">
+      <h3>Risk Assessment</h3>
+      <p>Understanding exposure across operations, assets and liabilities.</p>
+    </div>
 
-    <p>
-      We break down complexity, clarify trade-offs,
-      and bring structure where ambiguity dominates.
-    </p>
+    <div class="card">
+      <h3>Insurance Advisory</h3>
+      <p>Guidance on selecting the right coverage across multiple insurers.</p>
+    </div>
+
+    <div class="card">
+      <h3>Policy Placement</h3>
+      <p>Execution and placement aligned to client requirements and risk profile.</p>
+    </div>
   </div>
+</div>
 
+<div class="section">
+  <h2>Our Approach</h2>
+
+  <p>
+    We operate independently across insurers, focusing on client requirements
+    rather than product pushing. Our role is to structure coverage that aligns
+    with actual risk, not just policy availability.
+  </p>
+
+  <p>
+    The emphasis is on clarity, relevance and long-term alignment.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Regulatory Context</h2>
+
+  <p>
+    Sent Risk Advisory operates under Sathya Axis Enterprises through a group
+    of IRDAI-licensed insurance agents, working with multiple insurers.
+  </p>
 </div>
 
 </body>
