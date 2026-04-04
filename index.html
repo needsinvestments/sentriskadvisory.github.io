@@ -71,6 +71,7 @@
     .hero p {
       margin-top: 18px;
       color: #6b7280;
+      max-width: 650px;
     }
 
     .cta {
@@ -83,14 +84,28 @@
       text-decoration: none;
     }
 
-    .hero img {
-      width: 100%;
-      border-radius: 10px;
+    /* VISUAL PANEL */
+    .visual-box {
+      background: #ffffff;
       border: 1px solid #e5e7eb;
-      background: #fafafa;
+      border-radius: 12px;
+      padding: 25px;
     }
 
-    /* SECTION */
+    .bar {
+      background: #e5e7eb;
+      height: 8px;
+      border-radius: 6px;
+      margin-top: 6px;
+    }
+
+    .fill {
+      height: 8px;
+      border-radius: 6px;
+      background: #111827;
+    }
+
+    /* SECTIONS */
     .section {
       padding: 50px 60px;
       max-width: 1100px;
@@ -163,9 +178,43 @@
     <a class="cta" href="contact.html">Discuss Your Requirement</a>
   </div>
 
-  <div>
-    <!-- Replace this with your IRDA image -->
-    <img src="irda-chart.png" alt="Insurance data insights">
+  <!-- VISUAL -->
+  <div class="visual-box">
+
+    <div style="font-weight:600; margin-bottom:15px;">
+      Risk & Coverage Indicators
+    </div>
+
+    <div style="margin-bottom:15px;">
+      <div style="font-size:13px; color:#6b7280;">Claim Settlement Strength</div>
+      <div class="bar"><div class="fill" style="width:92%;"></div></div>
+    </div>
+
+    <div style="margin-bottom:15px;">
+      <div style="font-size:13px; color:#6b7280;">Risk Alignment</div>
+      <div class="bar"><div class="fill" style="width:85%; background:#374151;"></div></div>
+    </div>
+
+    <div style="margin-bottom:20px;">
+      <div style="font-size:13px; color:#6b7280;">Coverage Adequacy</div>
+      <div class="bar"><div class="fill" style="width:88%; background:#6b7280;"></div></div>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; font-size:13px; color:#6b7280;">
+      <div>
+        <div style="font-weight:600; color:#111827;">92%</div>
+        <div>CSR Insight</div>
+      </div>
+      <div>
+        <div style="font-weight:600; color:#111827;">85%</div>
+        <div>ICR Range</div>
+      </div>
+      <div>
+        <div style="font-weight:600; color:#111827;">Structured</div>
+        <div>Approach</div>
+      </div>
+    </div>
+
   </div>
 
 </div>
@@ -179,11 +228,11 @@
   </p>
 
   <p class="sub">
-    We believe insurance must evolve beyond transactional placement into a structured framework for protecting continuity and financial stability.
+    In an environment where decisions are often made under uncertainty, we believe insurance must evolve beyond transactional placement into a structured framework for protecting business continuity and financial stability.
   </p>
 
   <p class="sub">
-    Our vision is to contribute meaningfully to this shift by improving decision quality and aligning coverage with real exposure.
+    Our vision is to contribute meaningfully to this shift by improving decision quality, aligning coverage with real exposure and building long-term trust.
   </p>
 </div>
 
@@ -192,7 +241,7 @@
   <h2>Core Capabilities</h2>
 
   <p class="sub">
-    Our work focuses on improving how risk is understood, evaluated and protected through structured advisory.
+    Our work is centred on improving how risk is understood, evaluated and protected through structured advisory.
   </p>
 
   <div class="grid">
@@ -208,7 +257,7 @@
   <h2>Who We Serve</h2>
 
   <p class="sub">
-    We work with businesses and individuals requiring structured and reliable insurance solutions.
+    Our clients operate across varying scales and complexities, requiring structured and reliable insurance solutions.
   </p>
 
   <div class="grid">
