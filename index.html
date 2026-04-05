@@ -8,9 +8,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f5f6f8;
       color: #1f2937;
       line-height: 1.75;
+      background: #f4f6f8;
     }
 
     /* NAV */
@@ -23,7 +23,6 @@
       border-bottom: 1px solid #e5e7eb;
       position: sticky;
       top: 0;
-      z-index: 1000;
     }
 
     .brand {
@@ -32,25 +31,16 @@
       gap: 16px;
     }
 
-    .brand img {
-      height: 75px;
-    }
+    .brand img { height: 75px; }
 
-    .brand-name {
-      font-size: 24px;
-      font-weight: 700;
-    }
+    .brand-name { font-size: 24px; font-weight: 700; }
 
-    .tagline {
-      font-size: 13px;
-      color: #6b7280;
-    }
+    .tagline { font-size: 13px; color: #6b7280; }
 
     .nav a {
       margin-left: 28px;
       text-decoration: none;
       color: #4b5563;
-      font-size: 14px;
     }
 
     /* HERO */
@@ -58,22 +48,15 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 40px;
-      align-items: center;
-      padding: 80px 60px 60px;
+      padding: 80px 60px;
       background: white;
       max-width: 1100px;
       margin: auto;
     }
 
-    .hero h1 {
-      font-size: 42px;
-    }
+    .hero h1 { font-size: 42px; }
 
-    .hero p {
-      margin-top: 18px;
-      color: #6b7280;
-      max-width: 650px;
-    }
+    .hero p { color: #6b7280; margin-top: 18px; }
 
     .cta {
       margin-top: 25px;
@@ -85,48 +68,53 @@
       text-decoration: none;
     }
 
-    /* VISUAL PANEL (COLORFUL) */
-    .visual-box {
+    /* VISUAL */
+    .visual {
       background: linear-gradient(135deg, #111827, #1f2937);
       border-radius: 12px;
-      padding: 28px;
+      padding: 25px;
       color: white;
     }
 
     /* SECTIONS */
     .section {
-      padding: 50px 60px;
+      padding: 60px 60px;
       max-width: 1100px;
       margin: auto;
-      border-top: 1px solid #e5e7eb;
     }
 
-    h2 {
-      font-size: 28px;
+    .light { background: #f4f6f8; }
+    .white { background: white; }
+    .dark { background: #111827; color: white; }
+
+    h2 { font-size: 30px; }
+
+    .sub { margin-top: 12px; color: #6b7280; }
+
+    .dark .sub { color: #d1d5db; }
+
+    /* CORE CARDS */
+    .core-item {
+      padding: 20px;
+      border-bottom: 1px solid #e5e7eb;
+      cursor: pointer;
     }
 
-    .sub {
-      margin-top: 12px;
+    .core-desc {
+      display: none;
+      margin-top: 10px;
       color: #6b7280;
-      max-width: 800px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 22px;
-      margin-top: 25px;
-    }
-
-    .card {
-      padding: 22px;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      background: white;
     }
 
   </style>
+
+  <script>
+    function toggle(id) {
+      var el = document.getElementById(id);
+      el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </head>
 
 <body>
@@ -142,7 +130,7 @@
   </div>
 
   <div>
-    <a href="index.html">Home</a>
+    <a href="#">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
@@ -156,65 +144,23 @@
     <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
 
     <p>
-      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory and insurance solutions across industries.
-    </p>
-
-    <p>
-      We approach insurance as a framework for managing uncertainty, aligning coverage with real exposure and long-term continuity.
+      We approach insurance as a structured framework for managing uncertainty and protecting long-term business continuity.
     </p>
 
     <a class="cta" href="contact.html">Discuss Your Requirement</a>
   </div>
 
-  <!-- COLORFUL VISUAL -->
-  <div class="visual-box">
-
-    <div style="font-weight:600; margin-bottom:18px; font-size:15px;">
-      Risk & Coverage Indicators
-    </div>
-
-    <div style="margin-bottom:16px;">
-      <div style="font-size:13px; color:#9ca3af;">Claim Settlement Strength</div>
-      <div style="background:#374151; height:8px; border-radius:6px; margin-top:6px;">
-        <div style="width:92%; height:8px; background:#22c55e; border-radius:6px;"></div>
-      </div>
-    </div>
-
-    <div style="margin-bottom:16px;">
-      <div style="font-size:13px; color:#9ca3af;">Risk Alignment</div>
-      <div style="background:#374151; height:8px; border-radius:6px; margin-top:6px;">
-        <div style="width:85%; height:8px; background:#3b82f6; border-radius:6px;"></div>
-      </div>
-    </div>
-
-    <div style="margin-bottom:22px;">
-      <div style="font-size:13px; color:#9ca3af;">Coverage Adequacy</div>
-      <div style="background:#374151; height:8px; border-radius:6px; margin-top:6px;">
-        <div style="width:88%; height:8px; background:#f59e0b; border-radius:6px;"></div>
-      </div>
-    </div>
-
-    <div style="display:flex; justify-content:space-between; font-size:13px; color:#d1d5db;">
-      <div>
-        <div style="font-weight:700; font-size:16px; color:#22c55e;">92%</div>
-        <div>CSR Strength</div>
-      </div>
-      <div>
-        <div style="font-weight:700; font-size:16px; color:#3b82f6;">85%</div>
-        <div>ICR Range</div>
-      </div>
-      <div>
-        <div style="font-weight:700; font-size:16px; color:#f59e0b;">Structured</div>
-        <div>Approach</div>
-      </div>
-    </div>
-
+  <div class="visual">
+    <b>Risk Indicators</b><br><br>
+    Claim Strength ██████████ 92%<br>
+    Risk Alignment █████████ 85%<br>
+    Coverage ██████████ 88%
   </div>
 
 </div>
 
 <!-- VISION -->
-<div class="section">
+<div class="section light">
   <h2>Our Vision</h2>
 
   <p class="sub">
@@ -222,51 +168,64 @@
   </p>
 
   <p class="sub">
-    In an environment where decisions are often made under uncertainty, we believe insurance must evolve beyond transactional placement into a structured framework for protecting business continuity and financial stability.
+    As India continues to strengthen its global economic presence across industries, the complexity of risk exposure is increasing. Insurance, therefore, must evolve beyond a transactional requirement into a strategic component of business decision-making.
   </p>
 
   <p class="sub">
-    Our vision is to contribute meaningfully to this shift by improving decision quality, aligning coverage with real exposure and building long-term trust.
+    Our vision is to contribute meaningfully to this transformation by aligning insurance with actual business realities, improving decision quality and fostering a more structured and responsible approach to risk across organisations.
   </p>
+
 </div>
 
 <!-- CORE -->
-<div class="section">
+<div class="section white">
   <h2>Core Capabilities</h2>
 
-  <p class="sub">
-    Our work is centred on improving how risk is understood, evaluated and protected through structured advisory.
-  </p>
-
-  <div class="grid">
-    <div class="card"><h3>Risk Assessment</h3><p>Identifying real exposure across operations.</p></div>
-    <div class="card"><h3>Insurance Advisory</h3><p>Independent and structured decision-making.</p></div>
-    <div class="card"><h3>Policy Structuring</h3><p>Aligning coverage with actual risk.</p></div>
-    <div class="card"><h3>Placement & Support</h3><p>Execution and continuity support.</p></div>
+  <div class="core-item" onclick="toggle('c1')">
+    Risk Assessment
+    <div id="c1" class="core-desc">
+      Identifying operational, financial and asset-level exposure to bring clarity to risks that are often underestimated.
+    </div>
   </div>
+
+  <div class="core-item" onclick="toggle('c2')">
+    Insurance Advisory
+    <div id="c2" class="core-desc">
+      Independent advisory ensuring coverage decisions are aligned with business needs rather than insurer-driven structures.
+    </div>
+  </div>
+
+  <div class="core-item" onclick="toggle('c3')">
+    Policy Structuring
+    <div id="c3" class="core-desc">
+      Designing insurance frameworks that reflect contractual obligations and evolving operational risk.
+    </div>
+  </div>
+
+  <div class="core-item" onclick="toggle('c4')">
+    Placement & Support
+    <div id="c4" class="core-desc">
+      Execution, coordination and ongoing support ensuring continuity and effectiveness.
+    </div>
+  </div>
+
 </div>
 
 <!-- CLIENTS -->
-<div class="section">
+<div class="section light">
   <h2>Who We Serve</h2>
 
   <p class="sub">
-    Our clients operate across varying scales and complexities, requiring structured and reliable insurance solutions.
+    We work with corporates, SMEs and individuals requiring structured and reliable insurance solutions aligned with real exposure.
   </p>
-
-  <div class="grid">
-    <div class="card"><h3>Corporates</h3><p>Enterprise-level risk coverage.</p></div>
-    <div class="card"><h3>SMEs</h3><p>Practical and scalable programs.</p></div>
-    <div class="card"><h3>HNI Clients</h3><p>Long-term financial protection.</p></div>
-  </div>
 </div>
 
 <!-- REGULATORY -->
-<div class="section">
+<div class="section dark">
   <h2>Regulatory Context</h2>
 
   <p class="sub">
-    Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals.
+    Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals working across insurers.
   </p>
 
   <p class="sub">
