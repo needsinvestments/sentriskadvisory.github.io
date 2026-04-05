@@ -5,116 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f6f8;
-      color: #1f2937;
-      line-height: 1.75;
-    }
+    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f5f6f8; color:#1f2937; line-height:1.75; }
 
-    /* NAV */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 60px;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-    }
+    .nav { display:flex; justify-content:space-between; align-items:center; padding:20px 60px; background:white; border-bottom:1px solid #e5e7eb; }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
+    .brand { display:flex; align-items:center; gap:16px; }
+    .brand img { height:75px; }
+    .brand-name { font-size:24px; font-weight:700; }
+    .tagline { font-size:13px; color:#6b7280; }
 
-    .brand img { height: 75px; }
+    .nav a { margin-left:28px; text-decoration:none; color:#4b5563; }
 
-    .brand-name { font-size: 24px; font-weight: 700; }
+    .hero { display:grid; grid-template-columns:1.1fr 1fr; gap:40px; padding:80px 60px; background:white; max-width:1100px; margin:auto; }
 
-    .tagline { font-size: 13px; color: #6b7280; }
+    .hero h1 { font-size:42px; }
+    .hero p { margin-top:18px; color:#6b7280; }
 
-    .nav a {
-      margin-left: 28px;
-      text-decoration: none;
-      color: #4b5563;
-    }
+    .cta { margin-top:25px; display:inline-block; padding:12px 20px; background:#111827; color:white; border-radius:6px; text-decoration:none; }
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 40px;
-      padding: 80px 60px 60px;
-      background: white;
-      max-width: 1100px;
-      margin: auto;
-    }
+    .hero img { width:100%; border-radius:10px; }
 
-    .hero h1 { font-size: 42px; }
+    .section { padding:55px 60px; max-width:1100px; margin:auto; border-top:1px solid #e5e7eb; }
+    .soft { background:#fafafa; }
 
-    .hero p { margin-top: 18px; color: #6b7280; }
-
-    .cta {
-      margin-top: 25px;
-      display: inline-block;
-      padding: 12px 20px;
-      background: #111827;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-
-    /* VISUAL */
-    .visual {
-      background: linear-gradient(135deg, #111827, #1f2937);
-      border-radius: 12px;
-      padding: 25px;
-      color: white;
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 55px 60px;
-      max-width: 1100px;
-      margin: auto;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .section.soft {
-      background: #fafafa;
-    }
-
-    h2 { font-size: 30px; }
-
-    .sub {
-      margin-top: 12px;
-      color: #6b7280;
-      max-width: 800px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 22px;
-      margin-top: 25px;
-    }
-
-    .card {
-      padding: 22px;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-      background: white;
-    }
+    h2 { font-size:30px; }
+    .sub { margin-top:12px; color:#6b7280; max-width:800px; }
 
   </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="brand">
     <img src="logo.png">
@@ -143,18 +64,14 @@
     </p>
 
     <p>
-      We approach insurance not as a product, but as a framework for managing uncertainty,
-      aligning coverage with real business exposure and long-term continuity.
+      We approach insurance as a framework for managing uncertainty, aligning coverage with real business exposure and long-term continuity.
     </p>
 
     <a class="cta" href="contact.html">Discuss Your Requirement</a>
   </div>
 
-  <div class="visual">
-    <b>Risk & Coverage Indicators</b><br><br>
-    Claim Strength ██████████ 92%<br>
-    Risk Alignment █████████ 85%<br>
-    Coverage ██████████ 88%
+  <div>
+    <img src="https://images.unsplash.com/photo-1581091870627-3c2fdbacb1b9">
   </div>
 
 </div>
@@ -168,37 +85,29 @@
   </p>
 
   <p class="sub">
-    In an environment where decisions are often made under uncertainty, we believe insurance must evolve beyond transactional placement into a structured framework for protecting business continuity and financial stability.
+    As India continues to strengthen its global economic presence, risk exposure across industries is becoming increasingly complex and interconnected.
   </p>
 
   <p class="sub">
-    Our vision is to contribute meaningfully to this shift by improving decision quality, aligning coverage with real exposure and building long-term trust in advisory-led insurance.
+    We believe insurance must evolve beyond transactional placement into a structured decision-making framework supporting business continuity and financial stability.
   </p>
 </div>
 
-<!-- CORE -->
+<!-- DECISION VISUAL -->
 <div class="section">
+  <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df" style="width:100%; border-radius:10px;">
+</div>
+
+<!-- CORE -->
+<div class="section soft">
   <h2>Core Capabilities</h2>
 
   <p class="sub">
     Our work is centred on improving how risk is understood, evaluated and protected through structured advisory.
   </p>
 
-  <div class="grid">
-    <div class="card"><h3>Risk Assessment</h3><p>Bringing visibility to real exposure across operations and assets.</p></div>
-    <div class="card"><h3>Insurance Advisory</h3><p>Ensuring decisions are aligned with business needs, not products.</p></div>
-    <div class="card"><h3>Policy Structuring</h3><p>Designing coverage frameworks reflecting operational realities.</p></div>
-    <div class="card"><h3>Placement & Support</h3><p>Execution and continuity across insurers.</p></div>
-  </div>
-</div>
-
-<!-- CLIENTS -->
-<div class="section soft">
-  <h2>Who We Serve</h2>
-
   <p class="sub">
-    Our clients operate across varying scales and complexities, but share a common need —
-    structured, reliable and context-driven insurance solutions.
+    Risk assessment, insurance advisory, policy structuring and placement are approached as interconnected elements of a unified framework.
   </p>
 </div>
 
