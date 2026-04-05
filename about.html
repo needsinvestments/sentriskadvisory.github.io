@@ -8,40 +8,79 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: #f4f6f8;
+      background: #f5f6f8;
       color: #1f2937;
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
+    /* NAV (IDENTICAL) */
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px 60px;
+      padding: 18px 60px;
       background: white;
       border-bottom: 1px solid #e5e7eb;
     }
 
-    .nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #4b5563;
-      font-size: 14px;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
+    .brand img { height: 70px; }
+
+    .brand-name {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .tagline {
+      font-size: 12px;
+      color: #6b7280;
+    }
+
+    .nav a {
+      margin-left: 26px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .nav a:hover {
+      color: #111827;
+      border-bottom: 2px solid #111827;
+      padding-bottom: 2px;
+    }
+
+    /* CONTAINER */
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 70px 60px;
+      background: white;
     }
 
     h1 {
       font-size: 36px;
+      margin-bottom: 15px;
     }
 
-    p {
-      margin-top: 20px;
-      color: #4b5563;
+    .sub {
+      margin-top: 14px;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
   </style>
@@ -49,82 +88,79 @@
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
-  
-  <!-- BRAND -->
-  <div style="display:flex; align-items:center; gap:14px;">
-    
-    <img src="logo.png" style="height:60px; object-fit:contain;">
-
+  <div class="brand">
+    <img src="logo.png">
     <div>
-      <div style="font-weight:600; font-size:18px; line-height:1;">
-        Sent Risk Advisory
-      </div>
-      <div style="font-size:12px; color:#6b7280; margin-top:4px;">
-        Engineering Critical Decisions
-      </div>
+      <div class="brand-name">Sent Risk Advisory</div>
+      <div class="tagline">Engineering Critical Decisions</div>
     </div>
-
   </div>
 
-  <!-- NAV -->
   <div>
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
     <a href="services.html">Services</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </div>
-
 </div>
+
+<!-- CONTENT -->
 <div class="container">
 
-  <h1>About Sent Risk Advisory</h1>
+  <h1>About</h1>
 
-  <p>
-    Sent Risk Advisory was established in 2021 under Sathya Axis Enterprises with a clear intent —
-    to build a disciplined and credible insurance advisory platform focused on understanding and
-    structuring risk in a meaningful way.
+  <p class="sub">
+    Sent Risk Advisory was established in 2021 with the objective of building a structured and credible insurance advisory platform aligned with evolving business risks and economic realities.
   </p>
 
-  <p>
-    The firm is led by professionally qualified individuals, including engineers and experienced
-    professionals with over 16 years of corporate exposure across IT and ITES sectors. This background
-    brings a structured, analytical and process-driven approach to insurance advisory, distinguishing
-    it from conventional transactional practices in the industry.
+  <p class="sub">
+    The firm is driven by professionally qualified individuals, including engineers and corporate professionals with over 16+ years of experience across IT and ITES sectors. 
+    This background brings a disciplined, analytical and systems-oriented approach to understanding risk and designing insurance solutions.
   </p>
 
-  <p>
-    Our transition into the insurance domain is driven by a strong belief that risk management and
-    insurance will play a critical role in the growth story of 21st century India. As businesses scale,
-    diversify and integrate globally, the need for structured risk coverage becomes increasingly important.
-  </p>
+  <!-- INDUSTRY CONTEXT -->
+  <div class="section">
+    <h2>Context & Perspective</h2>
 
-  <p>
-    India’s growing global presence across industries — including technology, manufacturing,
-    services and infrastructure — is creating new opportunities as well as new forms of risk.
-    In this evolving landscape, insurance is no longer a compliance requirement, but a strategic
-    tool for continuity, resilience and long-term stability.
-  </p>
+    <p class="sub">
+      India’s growing global presence across industries has led to increasing complexity in operational, financial and liability-related risks. 
+      As businesses scale, the nature of exposure evolves, requiring a more structured and informed approach to risk management.
+    </p>
 
-  <p>
-    The insurance industry in India is still underpenetrated relative to the scale and potential
-    of the economy. This presents a significant opportunity for professionals and advisory-driven
-    platforms to contribute meaningfully towards building awareness, improving coverage quality
-    and strengthening risk management practices across businesses.
-  </p>
+    <p class="sub">
+      At the same time, the insurance sector in India is undergoing significant expansion, creating both opportunities and responsibilities for professionals within the ecosystem.
+      There is a growing need for advisory-led engagement rather than product-driven interactions.
+    </p>
+  </div>
 
-  <p>
-    At Sent Risk Advisory, our focus is not merely on placing insurance policies, but on improving
-    the way businesses and individuals understand and approach risk. We work across insurers to
-    design solutions that are aligned with actual exposure, operational realities and long-term
-    protection needs.
-  </p>
+  <!-- APPROACH -->
+  <div class="section">
+    <h2>Our Approach</h2>
 
-  <p>
-    Our ambition is to build a trusted advisory platform that combines structured thinking,
-    professional discipline and practical execution — contributing to both client outcomes
-    and the broader development of the insurance ecosystem in India.
-  </p>
+    <p class="sub">
+      Sent Risk Advisory approaches insurance as a decision-making framework rather than a transactional requirement.
+      The focus remains on aligning coverage with actual exposure, improving clarity in decision-making and ensuring continuity in protection.
+    </p>
+
+    <p class="sub">
+      By integrating risk understanding, insurance structuring and insurer engagement, the firm aims to provide solutions that are both technically sound and practically relevant.
+    </p>
+  </div>
+
+  <!-- VISION -->
+  <div class="section">
+    <h2>Our Direction</h2>
+
+    <p class="sub">
+      The long-term objective is to contribute meaningfully to the growth of India’s insurance ecosystem by promoting a more structured, responsible and advisory-driven approach to risk.
+    </p>
+
+    <p class="sub">
+      Sent Risk Advisory aims to position itself as a trusted partner for businesses and individuals seeking clarity, reliability and long-term alignment in their insurance decisions.
+    </p>
+  </div>
 
 </div>
 
