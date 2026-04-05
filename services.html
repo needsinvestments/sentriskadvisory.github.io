@@ -10,75 +10,91 @@
       font-family: 'Segoe UI', sans-serif;
       background: #f5f6f8;
       color: #1f2937;
-      line-height: 1.75;
+      line-height: 1.7;
     }
 
+    /* NAV (IDENTICAL) */
     .nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 60px;
+      padding: 18px 60px;
       background: white;
       border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
     }
 
-    .brand img { height: 75px; }
+    .brand img { height: 70px; }
 
     .brand-name {
       font-size: 24px;
       font-weight: 700;
-      letter-spacing: 0.3px;
     }
 
     .tagline {
-      font-size: 13px;
+      font-size: 12px;
       color: #6b7280;
-      margin-top: 4px;
     }
 
     .nav a {
-      margin-left: 28px;
+      margin-left: 26px;
       text-decoration: none;
       color: #374151;
       font-size: 14px;
+      transition: all 0.2s ease;
     }
 
+    .nav a:hover {
+      color: #111827;
+      border-bottom: 2px solid #111827;
+      padding-bottom: 2px;
+    }
+
+    /* BANNER */
     .banner {
-      height: 300px;
-      background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df') center/cover no-repeat;
+      height: 260px;
+      background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
     }
 
+    /* CONTAINER */
     .container {
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
-      padding: 70px 60px;
+      padding: 60px 60px;
       background: white;
     }
 
-    h1 { font-size: 34px; margin-bottom: 10px; }
-    h2 { margin-top: 40px; font-size: 22px; }
-
-    .sub {
-      margin-top: 12px;
-      color: #6b7280;
-      max-width: 800px;
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
-    .section { margin-top: 40px; }
+    h2 {
+      font-size: 24px;
+      margin-top: 35px;
+    }
+
+    .sub {
+      margin-top: 10px;
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="brand">
     <img src="logo.png">
@@ -96,8 +112,10 @@
   </div>
 </div>
 
+<!-- BANNER -->
 <div class="banner"></div>
 
+<!-- CONTENT -->
 <div class="container">
 
   <h1>Services</h1>
@@ -117,29 +135,24 @@
     <h2>Corporate Insurance</h2>
 
     <p class="sub">
-      Corporate insurance requires a structured approach that integrates multiple lines of coverage including property, engineering,
-      marine, liability and employee benefits. We design insurance programs aligned with operational exposure, asset valuation,
-      supply chain dependencies and contractual obligations.
+      Corporate insurance requires a structured approach integrating property, engineering, marine, liability and employee benefits coverage aligned with operational exposure and contractual obligations.
     </p>
 
     <p class="sub">
-      Coverage structuring includes determination of appropriate sum insured, selection of policy extensions,
-      optimisation of deductibles and alignment of policy wordings to minimise coverage gaps and ambiguity during claims.
+      We structure coverage through appropriate sum insured determination, policy wording alignment and optimisation of deductibles to ensure clarity and effectiveness in claims.
     </p>
   </div>
 
-  <!-- RISK ADVISORY -->
+  <!-- RISK -->
   <div class="section">
     <h2>Risk Advisory</h2>
 
     <p class="sub">
-      Our advisory begins with identification and evaluation of risk across operations, assets and liabilities.
-      This includes assessment of property exposure, business interruption impact, liability scenarios and workforce-related risks.
+      Our advisory focuses on identification and evaluation of risk across assets, operations and liabilities including business interruption and liability exposure.
     </p>
 
     <p class="sub">
-      The objective is to quantify potential loss scenarios and establish a structured basis for insurance decision-making,
-      ensuring alignment between actual risk and coverage design.
+      This enables structured decision-making and alignment between actual exposure and insurance coverage.
     </p>
   </div>
 
@@ -148,13 +161,11 @@
     <h2>SME Insurance Solutions</h2>
 
     <p class="sub">
-      SMEs require scalable insurance frameworks that balance cost efficiency with adequate protection.
-      We design structured solutions that cover key operational risks while remaining aligned with financial capacity and growth objectives.
+      SMEs require scalable insurance frameworks that balance cost efficiency with adequate protection across operational and financial risks.
     </p>
 
     <p class="sub">
-      Our approach ensures that SMEs avoid underinsurance, fragmented coverage and misaligned policy structures,
-      enabling continuity and resilience as the business evolves.
+      We ensure structured coverage that supports growth while avoiding fragmented and inefficient insurance arrangements.
     </p>
   </div>
 
@@ -163,13 +174,11 @@
     <h2>Personal Insurance</h2>
 
     <p class="sub">
-      Personal insurance is approached as a long-term financial protection framework rather than isolated product selection.
-      Our advisory covers life insurance, health insurance, retirement planning and education planning.
+      Personal insurance is structured around long-term financial protection including life cover, health insurance, retirement planning and education planning.
     </p>
 
     <p class="sub">
-      The objective is to ensure financial stability across life stages by aligning coverage with income protection,
-      wealth preservation and future financial goals.
+      The focus remains on ensuring stability, continuity and alignment with future financial objectives.
     </p>
   </div>
 
