@@ -13,7 +13,7 @@
       line-height: 1.75;
     }
 
-    /* HEADER (SAME AS INDEX) */
+    /* HEADER (IDENTICAL TO INDEX) */
     .nav {
       display: flex;
       justify-content: space-between;
@@ -47,41 +47,14 @@
       margin-left: 28px;
       text-decoration: none;
       color: #4b5563;
-      font-size: 14px;
+      font-size: 14px; /* FIXED */
+      font-weight: 500; /* MATCHED */
     }
 
-    /* BANNER */
+    /* CLEAN BANNER (NO TEXT) */
     .banner {
       height: 300px;
       background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    .banner::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.55);
-    }
-
-    .banner-content {
-      position: relative;
-      color: white;
-      text-align: center;
-    }
-
-    .banner-content h1 {
-      font-size: 40px;
-      margin: 0;
-    }
-
-    .banner-content p {
-      margin-top: 10px;
-      color: #d1d5db;
-      font-size: 15px;
     }
 
     /* CONTENT */
@@ -90,6 +63,11 @@
       margin: auto;
       padding: 70px 60px;
       background: white;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin-bottom: 10px;
     }
 
     h2 {
@@ -130,16 +108,13 @@
   </div>
 </div>
 
-<!-- BANNER -->
-<div class="banner">
-  <div class="banner-content">
-    <h1>Services</h1>
-    <p>Structured insurance and risk advisory across corporate and personal needs</p>
-  </div>
-</div>
+<!-- BANNER IMAGE ONLY -->
+<div class="banner"></div>
 
 <!-- CONTENT -->
 <div class="container">
+
+  <h1>Services</h1>
 
   <p class="sub">
     Our services are structured to address risk comprehensively across business operations, financial exposure and individual protection requirements.
