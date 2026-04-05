@@ -5,37 +5,127 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f5f6f8; color:#1f2937; line-height:1.75; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6f8;
+      color: #1f2937;
+      line-height: 1.7;
+    }
 
-    .nav { display:flex; justify-content:space-between; align-items:center; padding:20px 60px; background:white; border-bottom:1px solid #e5e7eb; }
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 60px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
 
-    .brand { display:flex; align-items:center; gap:16px; }
-    .brand img { height:75px; }
-    .brand-name { font-size:24px; font-weight:700; }
-    .tagline { font-size:13px; color:#6b7280; }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-    .nav a { margin-left:28px; text-decoration:none; color:#4b5563; }
+    .brand img { height: 70px; }
 
-    .hero { display:grid; grid-template-columns:1.1fr 1fr; gap:40px; padding:80px 60px; background:white; max-width:1100px; margin:auto; }
+    .brand-name {
+      font-size: 23px;
+      font-weight: 700;
+    }
 
-    .hero h1 { font-size:42px; }
-    .hero p { margin-top:18px; color:#6b7280; }
+    .tagline {
+      font-size: 12px;
+      color: #6b7280;
+    }
 
-    .cta { margin-top:25px; display:inline-block; padding:12px 20px; background:#111827; color:white; border-radius:6px; text-decoration:none; }
+    .nav a {
+      margin-left: 26px;
+      text-decoration: none;
+      color: #374151;
+      font-size: 14px;
+    }
 
-    .hero img { width:100%; border-radius:10px; }
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 35px;
+      padding: 70px 60px;
+      background: white;
+      max-width: 1100px;
+      margin: auto;
+    }
 
-    .section { padding:55px 60px; max-width:1100px; margin:auto; border-top:1px solid #e5e7eb; }
-    .soft { background:#fafafa; }
+    .hero h1 {
+      font-size: 40px;
+    }
 
-    h2 { font-size:30px; }
-    .sub { margin-top:12px; color:#6b7280; max-width:800px; }
+    .hero p {
+      margin-top: 14px;
+      color: #6b7280;
+    }
+
+    .cta {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 11px 18px;
+      background: #111827;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 45px 60px;
+      max-width: 1100px;
+      margin: auto;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .soft {
+      background: #fafafa;
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .sub {
+      margin-top: 10px;
+      color: #6b7280;
+      max-width: 800px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .card {
+      padding: 18px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      background: white;
+    }
 
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="brand">
     <img src="logo.png">
@@ -71,7 +161,7 @@
   </div>
 
   <div>
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px;">
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
   </div>
 
 </div>
@@ -93,111 +183,78 @@
   </p>
 </div>
 
-<!-- DECISION VISUAL -->
+<!-- IMAGE -->
 <div class="section">
-<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px;">
+  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px;">
 </div>
 
 <!-- CORE -->
 <div class="section soft">
   <h2>Core Capabilities</h2>
 
-<p class="sub">
-  Our core capabilities are built around a structured understanding of risk, insurance design and long-term coverage alignment.
-  We approach insurance as an integrated framework combining exposure identification, policy structuring, insurer evaluation and ongoing program management.
-</p>
-
-<p class="sub">
-  Each engagement is designed to ensure that coverage reflects actual business exposure, contractual obligations and financial impact,
-  while maintaining efficiency in premium deployment and continuity in protection.
-</p>
-
-<div class="grid">
-
-  <div class="card">
-    <h3>Risk Assessment & Exposure Mapping</h3>
-    <p>
-      Identification and evaluation of risk across assets, operations, liabilities and business processes including property,
-      business interruption, liability exposure and workforce-related risks.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Insurance Program Structuring</h3>
-    <p>
-      Design of structured insurance programs across property, engineering, marine, liability and employee benefits
-      aligned with operational exposure and contractual requirements.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Insurer Evaluation & Placement</h3>
-    <p>
-      Selection of insurers based on underwriting approach, claim settlement performance and financial strength,
-      ensuring optimal placement of risk across multiple insurers.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Policy Review & Optimisation</h3>
-    <p>
-      Review of policy wordings, exclusions, sub-limits and sum insured to identify gaps, overlaps and inefficiencies
-      in coverage structure.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Claims Advisory & Support</h3>
-    <p>
-      Assistance in claim documentation, interpretation of policy terms and coordination with insurers
-      to ensure timely and appropriate settlement.
-    </p>
-  </div>
-
-  <div class="card">
-    <h3>Ongoing Risk & Insurance Management</h3>
-    <p>
-      Continuous review of insurance programs aligned with evolving business exposure,
-      renewal strategy and long-term risk management objectives.
-    </p>
-  </div>
-
-</div>
-<!-- REGULATORY -->
-<div style="
-  max-width:1100px;
-  margin:40px auto 60px;
-  padding:20px 60px;
-  font-size:13px;
-  color:#6b7280;
-  border-top:1px solid #e5e7eb;
-">
-
-  <p>
-    Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals and works across multiple insurers.
-    All advisory and placement activities are carried out in accordance with applicable regulatory frameworks.
+  <p class="sub">
+    Our core capabilities are built around a structured understanding of risk, insurance design and long-term coverage alignment.
   </p>
 
+  <p class="sub">
+    We approach insurance as an integrated framework combining exposure identification, policy structuring, insurer evaluation and ongoing program management.
+  </p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Risk Assessment & Exposure Mapping</h3>
+      <p>Evaluation of risk across assets, operations, liabilities and business processes including property, business interruption and liability exposure.</p>
+    </div>
+
+    <div class="card">
+      <h3>Insurance Program Structuring</h3>
+      <p>Design of structured insurance programs across property, engineering, marine, liability and employee benefits aligned with operational exposure.</p>
+    </div>
+
+    <div class="card">
+      <h3>Insurer Evaluation & Placement</h3>
+      <p>Selection of insurers based on underwriting approach, claim performance and financial strength ensuring optimal placement.</p>
+    </div>
+
+    <div class="card">
+      <h3>Policy Review & Optimisation</h3>
+      <p>Review of policy wordings, exclusions and sum insured to identify gaps and inefficiencies in coverage.</p>
+    </div>
+
+    <div class="card">
+      <h3>Claims Advisory & Support</h3>
+      <p>Support in claim documentation, interpretation and coordination with insurers for timely settlement.</p>
+    </div>
+
+    <div class="card">
+      <h3>Ongoing Risk & Insurance Management</h3>
+      <p>Continuous review of insurance programs aligned with evolving business exposure and renewal strategy.</p>
+    </div>
+
+  </div>
 </div>
+
+<!-- REGULATORY FOOTER -->
 <div style="
   background:#fafafa;
   border-top:1px solid #e5e7eb;
-  margin-top:60px;
+  margin-top:40px;
 ">
-
   <div style="
     max-width:1100px;
     margin:auto;
-    padding:25px 60px;
+    padding:20px 60px;
     font-size:13px;
     color:#6b7280;
     line-height:1.6;
   ">
-
-   
-
+    <p>
+      Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals and works across multiple insurers.
+      All advisory and placement activities are carried out in accordance with applicable regulatory frameworks.
+    </p>
   </div>
-
 </div>
+
 </body>
 </html>
