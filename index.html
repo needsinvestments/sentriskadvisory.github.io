@@ -8,9 +8,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      background: #f5f6f8;
       color: #1f2937;
       line-height: 1.75;
-      background: #f4f6f8;
     }
 
     /* NAV */
@@ -21,8 +21,6 @@
       padding: 20px 60px;
       background: white;
       border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
     }
 
     .brand {
@@ -48,7 +46,7 @@
       display: grid;
       grid-template-columns: 1.1fr 1fr;
       gap: 40px;
-      padding: 80px 60px;
+      padding: 80px 60px 60px;
       background: white;
       max-width: 1100px;
       margin: auto;
@@ -56,7 +54,7 @@
 
     .hero h1 { font-size: 42px; }
 
-    .hero p { color: #6b7280; margin-top: 18px; }
+    .hero p { margin-top: 18px; color: #6b7280; }
 
     .cta {
       margin-top: 25px;
@@ -78,43 +76,40 @@
 
     /* SECTIONS */
     .section {
-      padding: 60px 60px;
+      padding: 55px 60px;
       max-width: 1100px;
       margin: auto;
+      border-top: 1px solid #e5e7eb;
     }
 
-    .light { background: #f4f6f8; }
-    .white { background: white; }
-    .dark { background: #111827; color: white; }
+    .section.soft {
+      background: #fafafa;
+    }
 
     h2 { font-size: 30px; }
 
-    .sub { margin-top: 12px; color: #6b7280; }
-
-    .dark .sub { color: #d1d5db; }
-
-    /* CORE CARDS */
-    .core-item {
-      padding: 20px;
-      border-bottom: 1px solid #e5e7eb;
-      cursor: pointer;
+    .sub {
+      margin-top: 12px;
+      color: #6b7280;
+      max-width: 800px;
     }
 
-    .core-desc {
-      display: none;
-      margin-top: 10px;
-      color: #6b7280;
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .card {
+      padding: 22px;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
+      background: white;
     }
 
   </style>
-
-  <script>
-    function toggle(id) {
-      var el = document.getElementById(id);
-      el.style.display = el.style.display === "block" ? "none" : "block";
-    }
-  </script>
-
 </head>
 
 <body>
@@ -144,14 +139,19 @@
     <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
 
     <p>
-      We approach insurance as a structured framework for managing uncertainty and protecting long-term business continuity.
+      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory and insurance solutions across industries.
+    </p>
+
+    <p>
+      We approach insurance not as a product, but as a framework for managing uncertainty,
+      aligning coverage with real business exposure and long-term continuity.
     </p>
 
     <a class="cta" href="contact.html">Discuss Your Requirement</a>
   </div>
 
   <div class="visual">
-    <b>Risk Indicators</b><br><br>
+    <b>Risk & Coverage Indicators</b><br><br>
     Claim Strength ██████████ 92%<br>
     Risk Alignment █████████ 85%<br>
     Coverage ██████████ 88%
@@ -160,7 +160,7 @@
 </div>
 
 <!-- VISION -->
-<div class="section light">
+<div class="section soft">
   <h2>Our Vision</h2>
 
   <p class="sub">
@@ -168,60 +168,42 @@
   </p>
 
   <p class="sub">
-    As India continues to strengthen its global economic presence across industries, the complexity of risk exposure is increasing. Insurance, therefore, must evolve beyond a transactional requirement into a strategic component of business decision-making.
+    In an environment where decisions are often made under uncertainty, we believe insurance must evolve beyond transactional placement into a structured framework for protecting business continuity and financial stability.
   </p>
 
   <p class="sub">
-    Our vision is to contribute meaningfully to this transformation by aligning insurance with actual business realities, improving decision quality and fostering a more structured and responsible approach to risk across organisations.
+    Our vision is to contribute meaningfully to this shift by improving decision quality, aligning coverage with real exposure and building long-term trust in advisory-led insurance.
   </p>
-
 </div>
 
 <!-- CORE -->
-<div class="section white">
+<div class="section">
   <h2>Core Capabilities</h2>
 
-  <div class="core-item" onclick="toggle('c1')">
-    Risk Assessment
-    <div id="c1" class="core-desc">
-      Identifying operational, financial and asset-level exposure to bring clarity to risks that are often underestimated.
-    </div>
-  </div>
+  <p class="sub">
+    Our work is centred on improving how risk is understood, evaluated and protected through structured advisory.
+  </p>
 
-  <div class="core-item" onclick="toggle('c2')">
-    Insurance Advisory
-    <div id="c2" class="core-desc">
-      Independent advisory ensuring coverage decisions are aligned with business needs rather than insurer-driven structures.
-    </div>
+  <div class="grid">
+    <div class="card"><h3>Risk Assessment</h3><p>Bringing visibility to real exposure across operations and assets.</p></div>
+    <div class="card"><h3>Insurance Advisory</h3><p>Ensuring decisions are aligned with business needs, not products.</p></div>
+    <div class="card"><h3>Policy Structuring</h3><p>Designing coverage frameworks reflecting operational realities.</p></div>
+    <div class="card"><h3>Placement & Support</h3><p>Execution and continuity across insurers.</p></div>
   </div>
-
-  <div class="core-item" onclick="toggle('c3')">
-    Policy Structuring
-    <div id="c3" class="core-desc">
-      Designing insurance frameworks that reflect contractual obligations and evolving operational risk.
-    </div>
-  </div>
-
-  <div class="core-item" onclick="toggle('c4')">
-    Placement & Support
-    <div id="c4" class="core-desc">
-      Execution, coordination and ongoing support ensuring continuity and effectiveness.
-    </div>
-  </div>
-
 </div>
 
 <!-- CLIENTS -->
-<div class="section light">
+<div class="section soft">
   <h2>Who We Serve</h2>
 
   <p class="sub">
-    We work with corporates, SMEs and individuals requiring structured and reliable insurance solutions aligned with real exposure.
+    Our clients operate across varying scales and complexities, but share a common need —
+    structured, reliable and context-driven insurance solutions.
   </p>
 </div>
 
 <!-- REGULATORY -->
-<div class="section dark">
+<div class="section">
   <h2>Regulatory Context</h2>
 
   <p class="sub">
