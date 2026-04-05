@@ -5,54 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body { margin:0; font-family:'Segoe UI',sans-serif; background:#f5f6f8; color:#1f2937; line-height:1.75; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6f8;
+      color: #1f2937;
+      line-height: 1.75;
+    }
 
-    .nav { display:flex; justify-content:space-between; padding:20px 60px; background:white; border-bottom:1px solid #e5e7eb; }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+    }
 
-    .nav a { margin-left:25px; text-decoration:none; color:#4b5563; }
+    .nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #4b5563;
+      font-size: 14px;
+    }
 
-    .section { padding:60px; max-width:1100px; margin:auto; }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 60px;
+      background: white;
+    }
 
-    h1 { font-size:36px; }
-    h2 { margin-top:40px; }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-    .sub { margin-top:10px; color:#6b7280; }
+    h2 {
+      margin-top: 40px;
+      font-size: 22px;
+    }
 
-    img { width:100%; border-radius:10px; margin-top:20px; }
+    .sub {
+      margin-top: 12px;
+      color: #6b7280;
+      max-width: 800px;
+    }
+
+    .section {
+      margin-top: 40px;
+    }
 
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div><b>Sent Risk Advisory</b></div>
   <div>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </div>
 </div>
 
-<div class="section">
+<!-- CONTENT -->
+<div class="container">
 
   <h1>Services</h1>
 
-  <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
-
-  <h2>Corporate Insurance</h2>
   <p class="sub">
-    Comprehensive insurance solutions across property, liability, employee benefits and specialised risk categories aligned with operational exposure.
+    Our services are structured to address risk comprehensively across business operations, financial exposure and individual protection requirements.
+    We approach each engagement with a focus on relevance, clarity and long-term alignment rather than product-driven outcomes.
   </p>
 
-  <h2>Risk Advisory</h2>
-  <p class="sub">
-    Structured evaluation of risk exposure across operations enabling informed decision-making and appropriate coverage design.
-  </p>
+  <!-- CORPORATE -->
+  <div class="section">
+    <h2>Corporate Insurance</h2>
 
-  <h2>Personal Insurance</h2>
-  <p class="sub">
-    Life, health and financial protection solutions addressing long-term needs such as retirement, education and asset protection.
-  </p>
+    <p class="sub">
+      Businesses today operate in environments where risks are interconnected across assets, operations, contracts and people.
+      Corporate insurance therefore requires a structured approach rather than fragmented policy purchases.
+    </p>
+
+    <p class="sub">
+      We design insurance programs covering property, engineering, liability, marine and employee benefits, ensuring that coverage reflects
+      actual operational exposure and contractual obligations.
+    </p>
+  </div>
+
+  <!-- RISK ADVISORY -->
+  <div class="section">
+    <h2>Risk Advisory</h2>
+
+    <p class="sub">
+      Insurance decisions are often made without a clear understanding of underlying risk exposure.
+      Our advisory focuses on identifying, evaluating and structuring risk in a manner that supports informed decision-making.
+    </p>
+
+    <p class="sub">
+      By aligning insurance with real business risks, we help organisations avoid both underinsurance and inefficient coverage structures.
+    </p>
+  </div>
+
+  <!-- SME -->
+  <div class="section">
+    <h2>SME Insurance Solutions</h2>
+
+    <p class="sub">
+      Small and medium enterprises require practical and scalable insurance solutions that balance cost efficiency with adequate protection.
+    </p>
+
+    <p class="sub">
+      We help SMEs implement structured coverage frameworks that support growth while protecting against key operational and financial risks.
+    </p>
+  </div>
+
+  <!-- PERSONAL -->
+  <div class="section">
+    <h2>Personal Insurance</h2>
+
+    <p class="sub">
+      Personal insurance forms a critical component of long-term financial planning.
+      It is essential not only for risk protection but also for ensuring stability across life stages.
+    </p>
+
+    <p class="sub">
+      Our advisory includes life insurance, health insurance, retirement planning and education planning,
+      ensuring that individuals and families are protected against uncertainties while meeting future goals.
+    </p>
+  </div>
 
 </div>
 
