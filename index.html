@@ -1,283 +1,397 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sent Risk Advisory</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sent Risk Advisory | Engineering Critical Decisions</title>
+<meta name="description" content="Sent Risk Advisory provides corporate insurance advisory and export-import advisory to Indian businesses, under Sathya Axis Enterprises.">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f6f8;
-      color: #1f2937;
-      line-height: 1.7;
-    }
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --deep:#050F1E; --navy:#0B2340; --blue:#3B7BFF; --blue-d:#2358D6; --blue-l:#E8EFFF; --teal:#12B5A0; --teal-d:#0B8575; --teal-l:#E2F6F3; --gold:#FFB400;
+  --ink:#0E1E30; --mute:#586B80; --line:#DCE4EE; --white:#fff;
+  --head:'Sora','Segoe UI',Arial,sans-serif; --body:'Manrope','Segoe UI',Arial,sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.7 var(--body);color:var(--ink);background:var(--white);overflow-x:hidden}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0 0 .55em;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,5.6vw,4.6rem);font-weight:800}
+h2{font-size:clamp(1.8rem,3.6vw,2.8rem);font-weight:700}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch}
+.lead{color:var(--mute);font-size:1.08rem}
 
-    /* NAV */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 60px;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-    }
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:20;color:var(--white);transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(5,15,30,.92);backdrop-filter:blur(12px);box-shadow:0 4px 24px rgba(0,0,0,.25)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:80px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font:700 1.15rem var(--head)}
+.brand img{height:70px;width:auto}
+nav{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;font-size:.95rem;opacity:.9;position:relative}
+nav a:not(.cta)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--gold);transition:width .25s}
+nav a:not(.cta):hover::after{width:100%}
+nav a.cta{background:var(--gold);color:var(--deep);padding:11px 24px;border-radius:999px;font-weight:700;opacity:1;transition:transform .2s}
+nav a.cta:hover{transform:translateY(-2px)}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+/* hero */
+.hero{background:var(--deep);color:var(--white);position:relative;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;animation:drift 14s ease-in-out infinite alternate}
+.blob.b1{width:520px;height:520px;background:var(--blue);left:-120px;top:-100px}
+.blob.b2{width:480px;height:480px;background:var(--teal);right:-100px;top:120px;animation-delay:-6s}
+.blob.b3{width:300px;height:300px;background:#6B3BFF;left:42%;bottom:-120px;opacity:.35;animation-delay:-3s}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.15)}}
+.hero .wrap{position:relative;padding-top:170px;padding-bottom:0}
+.hero .intro{max-width:880px}
+.hero .intro p{color:#B9CCE0;font-size:1.18rem}
+.rot{display:inline-block;position:relative;color:var(--blue);transition:opacity .35s,transform .35s}
+.rot.t{color:var(--teal)}
+.rot.out{opacity:0;transform:translateY(14px)}
+.btn{display:inline-block;padding:15px 32px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.98rem;margin:10px 12px 0 0;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px)}
+.btn.go{background:var(--gold);color:var(--deep);box-shadow:0 8px 28px rgba(255,180,0,.3)}
+.btn.out2{border:1.5px solid rgba(255,255,255,.4);color:var(--white)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:80px;transform:translateY(60px)}
+.duo button{text-align:left;border:0;border-radius:24px;padding:40px 36px 44px;color:var(--ink);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.duo .ins{background:var(--white)}.duo .trd{background:var(--white)}
+.duo button::before{content:"";position:absolute;left:0;top:0;right:0;height:6px}
+.duo .ins::before{background:var(--blue)}.duo .trd::before{background:var(--teal)}
+.duo button:hover{transform:translateY(-8px)}
+.duo .ico{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;margin-bottom:22px}
+.ins .ico{background:var(--blue-l)}.trd .ico{background:var(--teal-l)}
+.duo h2{font-size:1.6rem;margin-bottom:.4em}
+.duo p{color:var(--mute);margin-bottom:1.3em}
+.duo .go2{font:700 .95rem var(--head)}
+.ins .go2{color:var(--blue-d)}.trd .go2{color:var(--teal-d)}
 
-    .brand img { height: 70px; }
+/* marquee */
+.marquee{margin-top:60px;padding:90px 0 22px;background:var(--white);overflow:hidden;border-bottom:1px solid var(--line)}
+.track{display:flex;gap:14px;width:max-content;animation:run 38s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes run{to{transform:translateX(-50%)}}
+.track span{font:700 .95rem var(--head);padding:10px 22px;border-radius:999px;white-space:nowrap}
+.track .i{background:var(--blue-l);color:var(--blue-d)}.track .t{background:var(--teal-l);color:var(--teal-d)}
 
-    .brand-name {
-      font-size: 24px;
-      font-weight: 700;
-    }
+section{padding:100px 0}
+.center{text-align:center}.center .lead{margin-inline:auto}
 
-    .tagline {
-      font-size: 12px;
-      color: #6b7280;
-    }
+/* explorer */
+.switch{display:inline-flex;background:#EEF2F8;border-radius:999px;padding:6px;margin:30px 0 48px;position:relative}
+.switch button{border:0;background:none;padding:14px 30px;border-radius:999px;font:700 .98rem var(--head);color:var(--mute);position:relative;z-index:1;transition:color .25s}
+.switch button[aria-selected=true]{color:var(--white)}
+.pill{position:absolute;top:6px;bottom:6px;left:6px;border-radius:999px;background:var(--blue);transition:transform .35s cubic-bezier(.4,.1,.2,1),width .35s,background .35s;z-index:0}
+.panel{animation:in .5s ease}
+@keyframes in{from{opacity:0;transform:translateY(16px)}}
+.panel[hidden]{display:none}
+.phead{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:end;margin-bottom:44px;text-align:left}
+.phead p{margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}
+.c{border-radius:20px;padding:30px 28px;background:var(--white);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s}
+.c::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--acc);transition:width .3s}
+.c:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(11,35,64,.12);border-color:var(--acc)}
+.c:hover::after{width:8px}
+.c .n{width:44px;height:44px;border-radius:12px;background:var(--bg);color:var(--acc);display:grid;place-items:center;margin-bottom:16px}
+.c p{color:var(--mute);font-size:.96rem;margin:0}
+.pi{--acc:var(--blue);--bg:var(--blue-l)}.pt{--acc:var(--teal);--bg:var(--teal-l)}
+#explore{background:linear-gradient(180deg,#F5F8FD,#fff)}
 
-    .nav a {
-      margin-left: 26px;
-      text-decoration: none;
-      color: #374151;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
+/* meet */
+.meet{background:var(--deep);color:var(--white);position:relative;overflow:hidden}
+.meet .lead{color:#B9CCE0}
+.mh{max-width:760px;margin-bottom:56px}
+.flow{position:relative}
+.flow .cols,.flow .row{display:grid;grid-template-columns:1fr 150px 1fr;gap:0 28px;align-items:stretch}
+.flow .cols{margin-bottom:22px}
+.flow .cols b{font:700 .95rem var(--head);padding:10px 20px;border-radius:999px;justify-self:start}
+.flow .cols .ct{background:rgba(18,181,160,.18);color:#5FE3D1;border:1px solid var(--teal)}
+.flow .cols .ci{background:rgba(59,123,255,.2);color:#9DBBFF;border:1px solid var(--blue);justify-self:end}
+.flow::before{content:"";position:absolute;left:50%;top:62px;bottom:22px;width:2px;background:linear-gradient(var(--teal),var(--blue));transform:translateX(-50%);opacity:.7}
+.row{margin-bottom:18px}
+.row .box{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:22px 24px;transition:background .3s,transform .3s}
+.row .box:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.row .bt{border-left:4px solid var(--teal)}.row .bi{border-right:4px solid var(--blue)}
+.row .box p{margin:0;color:#DCE7F3;font-size:.97rem}
+.row .st{display:flex;align-items:center;justify-content:center;text-align:center;position:relative;z-index:1}
+.row .st span{background:var(--gold);color:var(--deep);font:700 .82rem var(--head);padding:9px 12px;border-radius:12px;line-height:1.25;box-shadow:0 0 0 6px var(--deep)}
+.sum{margin-top:36px;padding:26px 30px;border-radius:18px;background:linear-gradient(120deg,rgba(18,181,160,.22),rgba(59,123,255,.22));border:1px solid rgba(255,255,255,.2);font:600 1.1rem/1.5 var(--head);text-align:center}
 
-    .nav a:hover {
-      color: #111827;
-      border-bottom: 2px solid #111827;
-      padding-bottom: 2px;
-    }
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px;text-align:left}
+.steps div{padding:28px;border-radius:20px;background:#F3F6FB;transition:background .3s,transform .3s}
+.steps div:hover{background:linear-gradient(135deg,var(--blue-l),var(--teal-l));transform:translateY(-5px)}
+.steps em{font:800 2.2rem var(--head);font-style:normal;background:linear-gradient(90deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;display:block;margin-bottom:6px}
+.steps p{color:var(--mute);font-size:.95rem;margin:0}
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 35px;
-      padding: 70px 60px;
-      background: white;
-      max-width: 1100px;
-      margin: auto;
-    }
+.reg{background:#F3F6FA}
+.final{background:linear-gradient(120deg,var(--blue-d),var(--teal-d));color:var(--white);text-align:center}
+.final p{margin-inline:auto;color:#DDF3F0}
+.final .btn{background:var(--white);color:var(--deep)}
+footer{background:var(--deep);color:#8DA6BF;padding:44px 0;font-size:.88rem}
+footer .wrap{display:grid;grid-template-columns:1fr 2fr;gap:56px}
+footer b{color:var(--white);font-family:var(--head)}
+footer p{max-width:none;margin:0 0 .7em}
+footer a{color:var(--white)}
 
-    .hero h1 {
-      font-size: 42px;
-      line-height: 1.3;
-    }
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.on{opacity:1;transform:none}
 
-    .hero p {
-      margin-top: 14px;
-      color: #6b7280;
-      font-size: 15px;
-    }
+@media (max-width:960px){
+  .duo,.phead,.grid,footer .wrap{grid-template-columns:1fr}
+  .phead{gap:14px}
+  .steps{grid-template-columns:1fr 1fr}
+  .hero .wrap{padding-top:130px}
+  .duo{transform:translateY(40px)}.marquee{padding-top:70px}
+  section{padding:70px 0}
+  .bar{flex-wrap:wrap;padding:12px 0}nav{gap:14px}
+  .flow::before{left:14px;top:0;bottom:0;transform:none}
+  .flow .cols{display:none}
+  .flow .row{grid-template-columns:1fr;gap:10px;padding-left:36px}
+  .row .st{justify-content:flex-start;order:-1}
+  .row .st span{box-shadow:none}
+  .row .bt,.row .bi{border-right:1px solid rgba(255,255,255,.14)}
+  .row .bt{border-left:4px solid var(--teal)}.row .bi{border-left:4px solid var(--blue)}
+  .row .bt::before,.row .bi::before{display:block;font:700 .78rem var(--head);margin-bottom:6px}
+  .row .bt::before{content:"Export-Import Advisory";color:#5FE3D1}
+  .row .bi::before{content:"Insurance Advisory";color:#9DBBFF}
+}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.switch button{padding:12px 16px;font-size:.88rem}.duo button{padding:30px 24px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 
-    .cta {
-      margin-top: 22px;
-      display: inline-block;
-      padding: 12px 20px;
-      background: #111827;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-
-    .cta:hover {
-      background: #000;
-      transform: translateY(-2px);
-    }
-
-    .hero img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    /* SECTIONS */
-    .section {
-      padding: 45px 60px;
-      max-width: 1100px;
-      margin: auto;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .soft {
-      background: #fafafa;
-    }
-
-    h2 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .sub {
-      margin-top: 10px;
-      color: #6b7280;
-      max-width: 780px;
-      font-size: 15px;
-    }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-      gap: 18px;
-      margin-top: 22px;
-    }
-
-    .card {
-      padding: 20px;
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      background: white;
-      transition: all 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
-      border-color: #d1d5db;
-    }
-
-    .card h3 {
-      margin-bottom: 6px;
-      font-size: 17px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #6b7280;
-    }
-
-  </style>
+/* dark theme to match inner pages */
+html{background:var(--deep)}
+body{background:var(--deep);color:#C5D3E2}
+h2,h3{color:#fff}
+.duo h2,.duo h3{color:var(--ink)}
+.lead{color:#A3B8CC}
+.marquee{background:var(--deep);border-color:rgba(255,255,255,.12)}
+.track .i{background:rgba(59,123,255,.18);color:#9DBBFF}
+.track .t{background:rgba(18,181,160,.18);color:#5FE3D1}
+#explore{background:radial-gradient(800px 400px at 0% 0%,rgba(59,123,255,.16),transparent 70%),radial-gradient(800px 400px at 100% 100%,rgba(18,181,160,.14),transparent 70%),#07192D}
+.switch{background:rgba(255,255,255,.08)}
+.switch button{color:#A3B8CC}.switch button[aria-selected=true]{color:#fff}
+.c{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.13)}
+.c:hover{background:rgba(255,255,255,.09);box-shadow:0 20px 44px rgba(0,0,0,.4)}
+.c p{color:#A3B8CC}
+.steps div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12)}
+.steps div:hover{background:rgba(255,255,255,.09)}
+.steps p{color:#A3B8CC}
+#approach{background:radial-gradient(800px 400px at 100% 0%,rgba(18,181,160,.14),transparent 70%),var(--deep)}
+.reg{background:#07192D}
+.hero .wrap{padding-bottom:84px}
+.duo{transform:none;margin-top:64px}
+.marquee{margin-top:0;padding:34px 0 26px}
+.sum{max-width:none}
+footer{border-top:1px solid rgba(255,255,255,.12)}
+.tagl{display:block;font:700 .88rem var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+</style>
 </head>
-
 <body>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="brand">
-    <img src="logo.png">
-    <div>
-      <div class="brand-name">Sent Risk Advisory</div>
-      <div class="tagline">Engineering Critical Decisions</div>
-    </div>
+<header id="hd">
+  <div class="wrap bar">
+    <a class="brand" href="#top"><img src="logo/logo-horizontal-white.svg" alt="Sent Risk Advisory"></a>
+    <nav aria-label="Main">
+      <a href="#explore" data-go="ins">Practices</a>
+      <a href="services.html">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="about.html">About</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </nav>
   </div>
+</header>
 
-  <div>
-    <a href="#">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
-
-<!-- HERO -->
+<main id="top">
 <div class="hero">
-
-  <div>
-    <h1>Corporate Insurance Advisory Built Around Your Business Risks</h1>
-
-    <p>
-      Sent Risk Advisory operates under Sathya Axis Enterprises as a group of IRDAI-licensed professionals delivering structured advisory and insurance solutions across industries.
-    </p>
-
-    <p>
-      We approach insurance as a framework for managing uncertainty, aligning coverage with real business exposure and long-term continuity.
-    </p>
-
-    <a class="cta" href="contact.html">Discuss Your Requirement</a>
-  </div>
-
-  <div>
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80">
-  </div>
-
-</div>
-
-<!-- VISION -->
-<div class="section soft">
-  <h2>Our Vision</h2>
-
-  <p class="sub">
-    To build a disciplined and credible insurance advisory platform that enables businesses to approach risk with clarity, structure and long-term perspective.
-  </p>
-
-  <p class="sub">
-    As India continues to strengthen its global economic presence, risk exposure across industries is becoming increasingly complex and interconnected.
-  </p>
-
-  <p class="sub">
-    We believe insurance must evolve beyond transactional placement into a structured decision-making framework supporting business continuity and financial stability.
-  </p>
-</div>
-
-<!-- IMAGE -->
-<div class="section">
-  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" style="width:100%; border-radius:10px;">
-</div>
-
-<!-- CORE -->
-<div class="section soft">
-  <h2>Core Capabilities</h2>
-
-  <p class="sub">
-    Our core capabilities are built around a structured understanding of risk, insurance design and long-term coverage alignment.
-  </p>
-
-  <p class="sub">
-    We approach insurance as an integrated framework combining exposure identification, policy structuring, insurer evaluation and ongoing program management.
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Risk Assessment & Exposure Mapping</h3>
-      <p>Evaluation of risk across assets, operations, liabilities and business processes including property, business interruption and liability exposure.</p>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap">
+    <div class="intro">
+      <span class="tagl">Engineering Critical Decisions</span>
+      <h1>Expert advice on everything your business <span class="rot" id="rot">insures</span>.</h1>
+      <p>Sent Risk Advisory helps businesses manage risk on two fronts: protecting what they own through corporate insurance advisory, and trading across borders with confidence through export-import advisory. Our IRDAI-licensed professionals work across insurers and take the time to understand your operations, so every recommendation fits your exposure, your contracts and your plans.</p>
+      <a class="btn go" href="contact.html">Discuss your requirement</a>
+      <a class="btn out2" href="#explore">Explore our practices</a>
     </div>
-
-    <div class="card">
-      <h3>Insurance Program Structuring</h3>
-      <p>Design of structured insurance programs across property, engineering, marine, liability and employee benefits aligned with operational exposure.</p>
+    <div class="duo">
+      <button class="ins" data-go="ins">
+        <div class="ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#3B7BFF" stroke-width="2.4" stroke-linejoin="round"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z"/><path d="M11 16l4 4 7-8" stroke-linecap="round"/></svg></div>
+        <h2>Corporate Insurance Advisory</h2>
+        <p>Risk assessment, programme design, placement, policy review and claims support.</p>
+        <span class="go2">Explore insurance advisory &rarr;</span>
+      </button>
+      <button class="trd" data-go="trd">
+        <div class="ico"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#12B5A0" stroke-width="2.4" stroke-linejoin="round"><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c-6 6-6 18 0 24M16 4c6 6 6 18 0 24"/></svg></div>
+        <h2>Export and Import Advisory</h2>
+        <p>Trade readiness, documentation, contract terms and cargo risk for cross-border business.</p>
+        <span class="go2">Explore trade advisory &rarr;</span>
+      </button>
     </div>
-
-    <div class="card">
-      <h3>Insurer Evaluation & Placement</h3>
-      <p>Selection of insurers based on underwriting approach, claim performance and financial strength ensuring optimal placement.</p>
-    </div>
-
-    <div class="card">
-      <h3>Policy Review & Optimisation</h3>
-      <p>Review of policy wordings, exclusions and sum insured to identify gaps and inefficiencies in coverage.</p>
-    </div>
-
-    <div class="card">
-      <h3>Claims Advisory & Support</h3>
-      <p>Support in claim documentation, interpretation and coordination with insurers for timely settlement.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ongoing Risk & Insurance Management</h3>
-      <p>Continuous review of insurance programs aligned with evolving business exposure and renewal strategy.</p>
-    </div>
-
   </div>
 </div>
 
-<!-- REGULATORY FOOTER -->
-<div style="background:#fafafa;border-top:1px solid #e5e7eb;margin-top:40px;">
-  <div style="max-width:1100px;margin:auto;padding:20px 60px;font-size:13px;color:#6b7280;">
-    <p>
-      Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals and works across multiple insurers.
-      All advisory and placement activities are carried out in accordance with applicable regulatory frameworks.
-    </p>
-  </div>
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="track"></div>
 </div>
 
+<section id="explore" aria-labelledby="eh">
+  <div class="wrap center">
+    <h2 id="eh" class="rv">Two practices. Choose where to start.</h2>
+    <p class="lead rv">Switch between our practices to see what each one covers.</p>
+    <div class="switch rv" role="tablist" aria-label="Practice area">
+      <span class="pill" id="pill"></span>
+      <button role="tab" aria-selected="true" data-tab="ins" id="tab-ins">Insurance Advisory</button>
+      <button role="tab" aria-selected="false" data-tab="trd" id="tab-trd">Export-Import Advisory</button>
+    </div>
+
+    <div class="panel" id="p-ins" role="tabpanel" aria-labelledby="tab-ins">
+      <div class="phead"><h2>Insurance that matches how your business loses money.</h2><p class="lead">We examine your operations, then structure and place cover that responds to real exposure, with attention to wording, insurer strength and claims conduct.</p></div>
+      <div class="grid">
+        <div class="c pi"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div><h3>Risk assessment</h3><p>Exposure mapped across assets, operations, liabilities and business processes.</p></div>
+        <div class="c pi"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></div><h3>Programme design</h3><p>Property, engineering, marine, liability and employee benefits structured to work together.</p></div>
+        <div class="c pi"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.500-1-8-4-8-9V7z"/></svg></div><h3>Insurer evaluation and placement</h3><p>Selection on underwriting approach, claims performance and financial strength.</p></div>
+        <div class="c pi"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></div><h3>Policy review</h3><p>Wordings, exclusions and sums insured examined to close gaps and remove inefficiency.</p></div>
+        <div class="c pi"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 12a8 8 0 0 1 14-5l2-2v6h-6l2.500-2.500A5 5 0 1 0 17 14"/></svg></div><h3>Claims support</h3><p>Documentation, interpretation and coordination with insurers toward timely settlement.</p></div>
+        <div class="c pi"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Ongoing management</h3><p>Regular review of cover as your exposure changes, and a clear renewal strategy.</p></div>
+      </div>
+    </div>
+
+    <div class="panel" id="p-trd" role="tabpanel" aria-labelledby="tab-trd" hidden>
+      <div class="phead"><h2>Trade guidance for the questions domestic business never raises.</h2><p class="lead">Cross-border transactions bring paperwork, contract and risk questions. We help you enter new markets and run repeat shipments with those questions answered in advance.</p></div>
+      <div class="grid">
+        <div class="c pt"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 21V4M5 4h12l-2 4 2 4H5"/></svg></div><h3>Trade readiness</h3><p>Product, pricing and compliance checked before you approach a market.</p></div>
+        <div class="c pt"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 3h9l4 4v14H6z"/><path d="M9 12h7M9 16h7"/></svg></div><h3>Documentation</h3><p>Commercial, shipping and customs documents prepared correctly and in good time.</p></div>
+        <div class="c pt"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l8 4v5c0 5-3.500 8-8 9-4.500-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Compliance guidance</h3><p>The rules and procedures that apply to your product and trade route.</p></div>
+        <div class="c pt"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 8h14l-3-3M20 16H6l3 3"/></svg></div><h3>Incoterms and contracts</h3><p>Clear allocation of cost, responsibility and risk between buyer and seller.</p></div>
+        <div class="c pt"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 7h12v10H2zM14 10h5l3 3v4H14z"/><circle cx="7" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div><h3>Logistics coordination</h3><p>Freight forwarders, customs brokers and partners working to one plan.</p></div>
+        <div class="c pt"><div class="n"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 15l2 5h14l2-5zM7 15V7h8v8M15 10h4v5"/></svg></div><h3>Cargo risk cover</h3><p>Marine cargo and transit insurance arranged through our insurance practice.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="meet" aria-labelledby="mh">
+  <div class="wrap">
+    <div class="mh rv">
+      <h2 id="mh">How the two practices work together on one shipment</h2>
+      <p class="lead">The terms you sell on decide who carries the risk, and your insurance has to follow that line. When two separate advisors handle each side, the gaps surface during a claim. We handle both from the start.</p>
+    </div>
+    <div class="flow">
+      <div class="cols rv"><b class="ct">Export-Import Advisory</b><span></span><b class="ci">Insurance Advisory</b></div>
+      <div class="row rv">
+        <div class="box bt"><p>The delivery term is chosen, and with it who arranges transport and when risk passes to the buyer.</p></div>
+        <div class="st"><span>Sale terms agreed</span></div>
+        <div class="box bi"><p>Cover is arranged for the party that actually bears the risk, on the basis the contract requires.</p></div>
+      </div>
+      <div class="row rv">
+        <div class="box bt"><p>Invoice, packing list and shipping documents are prepared and checked.</p></div>
+        <div class="st"><span>Goods dispatched</span></div>
+        <div class="box bi"><p>Insured value, goods description and voyage details are declared consistently with those documents.</p></div>
+      </div>
+      <div class="row rv">
+        <div class="box bt"><p>Forwarders, transporters and customs agents are coordinated to one plan.</p></div>
+        <div class="st"><span>Goods in transit</span></div>
+        <div class="box bi"><p>Marine cargo cover remains in force for the full journey and its conditions.</p></div>
+      </div>
+      <div class="row rv">
+        <div class="box bt"><p>Contract and shipping records show what was agreed and what was delivered.</p></div>
+        <div class="st"><span>Loss or dispute</span></div>
+        <div class="box bi"><p>The claim is supported by those same records, which helps it settle faster.</p></div>
+      </div>
+    </div>
+    <p class="sum rv">Both practices work from the same facts, so your contract and your cover never contradict each other.</p>
+  </div>
+</section>
+
+<section id="approach" aria-labelledby="ah2">
+  <div class="wrap center">
+    <h2 id="ah2" class="rv">How we work with you</h2>
+    <p class="lead rv">The same four steps apply to both practices.</p>
+    <div class="steps">
+      <div class="rv"><em>1</em><h3>Understand</h3><p>We study your operations, contracts, counterparties and plans.</p></div>
+      <div class="rv"><em>2</em><h3>Assess</h3><p>We identify the exposures and requirements that matter most.</p></div>
+      <div class="rv"><em>3</em><h3>Recommend</h3><p>You receive a clear proposal with reasons for each choice.</p></div>
+      <div class="rv"><em>4</em><h3>Support</h3><p>We stay involved at renewals, new shipments and claims.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="reg" id="regulatory" aria-labelledby="rh">
+  <div class="wrap center rv">
+    <h2 id="rh">Regulatory information</h2>
+    <p class="lead">Sent Risk Advisory operates under Sathya Axis Enterprises through IRDAI-licensed professionals. Insurance advisory and placement follow the applicable regulatory framework and are subject to insurer terms and conditions. Export and import advisory is guidance and does not replace licensed customs brokers, freight forwarders or legal advisers where the law requires them.</p>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap rv">
+    <h2>Tell us what you need to protect or where you want to trade.</h2>
+    <p>We will respond with a proposed scope of work.</p>
+    <a class="btn" href="contact.html">Contact us</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Sent Risk Advisory</b><p style="margin:2px 0 10px;color:#FFB400;font:700 .74rem Manrope,Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase">Engineering Critical Decisions</p><p>Operating under Sathya Axis Enterprises</p><p>Level 3, Nirvanaz, Road No. 36, Jubilee Hills, Hyderabad 500033 &middot; <a href="tel:+916304128122">+91 6304 128 122</a> &middot; <a href="mailto:services@sent.co.in">services@sent.co.in</a></p><p><a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p></div>
+    <p>Insurance is the subject matter of solicitation. Coverage is subject to the terms, conditions and exclusions of the policy issued by the insurer. Nothing on this website is an offer of insurance or a guarantee of claim settlement.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)},$$=function(s){return document.querySelectorAll(s)};
+  var hd=$("#hd");
+  function sc(){hd.classList.toggle("solid",window.scrollY>40)}
+  sc();window.addEventListener("scroll",sc,{passive:true});
+
+  // rotating headline word, alternating insurance and trade terms
+  var W=[["insures","i"],["exports","t"],["protects","i"],["imports","t"],["builds","i"],["ships","t"]],k=0,r=$("#rot");
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+    setInterval(function(){
+      r.classList.add("out");
+      setTimeout(function(){k=(k+1)%W.length;r.textContent=W[k][0];r.className="rot"+(W[k][1]=="t"?" t":"");r.classList.add("out");
+        requestAnimationFrame(function(){requestAnimationFrame(function(){r.classList.remove("out")})})},350);
+    },2400);
+  }
+
+  // marquee
+  var I=["Property and fire","Business interruption","Engineering and projects","Marine and transit","Liability","Employee benefits","Policy review","Claims support"];
+  var T=["Market entry","Export documentation","Import compliance","Incoterms","Logistics coordination","Cargo risk cover","Contract terms","Trade readiness"];
+  var h="";for(var n=0;n<2;n++)for(var i=0;i<I.length;i++){h+='<span class="i">'+I[i]+'</span><span class="t">'+T[i]+'</span>'}
+  $("#track").innerHTML=h+h;
+
+  // practice switcher
+  var pill=$("#pill");
+  function tab(w,scroll){
+    ["ins","trd"].forEach(function(x){
+      var on=x==w;$("#p-"+x).hidden=!on;$("#tab-"+x).setAttribute("aria-selected",on);
+    });
+    var b=$("#tab-"+w);pill.style.width=b.offsetWidth+"px";pill.style.transform="translateX("+(b.offsetLeft-6)+"px)";
+    pill.style.background=w=="ins"?"var(--blue)":"var(--teal)";
+    if(scroll)$("#explore").scrollIntoView({behavior:"smooth"});
+  }
+  $$("[data-tab]").forEach(function(b){b.addEventListener("click",function(){tab(b.dataset.tab,false)})});
+  $$("[data-go]").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();tab(b.dataset.go,true)})});
+  window.addEventListener("resize",function(){tab($("#tab-trd").getAttribute("aria-selected")=="true"?"trd":"ins",false)});
+  tab("ins",false);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){tab("ins",false)});
+
+  // reveal on scroll
+  var els=$$(".rv");
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(e,i){e.style.transitionDelay=(i%4)*70+"ms";io.observe(e)});
+  }else els.forEach(function(e){e.classList.add("on")});
+})();
+</script>
 </body>
 </html>
