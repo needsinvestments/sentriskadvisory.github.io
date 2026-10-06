@@ -1,188 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Services | Sent Risk Advisory</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Sent Risk Advisory</title>
+<meta name="description" content="Corporate insurance advisory and export-import advisory from Sent Risk Advisory: risk assessment, programme design, placement, trade documentation, Incoterms and cargo cover.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pages.css">
+<style>
+.shero{padding:110px 0 120px}
+.shero h1{font-size:clamp(2.2rem,5.2vw,4.1rem);max-width:19ch;margin-bottom:.45em}
+.kicker{font:700 .85rem var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:block}
+.jump{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.jump a{text-decoration:none;font:700 .95rem var(--head);padding:14px 26px;border-radius:999px;border:1.5px solid;transition:transform .2s,background .2s}
+.jump a:hover{transform:translateY(-3px)}
+.jump .ji{border-color:var(--blue);color:#9DBBFF}.jump .ji:hover{background:rgba(59,123,255,.18)}
+.jump .jt{border-color:var(--teal);color:#5FE3D1}.jump .jt:hover{background:rgba(18,181,160,.18)}
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f5f6f8;
-      color: #1f2937;
-      line-height: 1.7;
-    }
+.split{display:grid;grid-template-columns:.85fr 1.35fr;gap:72px;align-items:start}
+.side{position:sticky;top:110px}
+.side .lead{margin-bottom:28px}
+.fit{margin:0;padding:22px 0 0;list-style:none;border-top:1px solid var(--edge)}
+.fit small{display:block;font:700 .8rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+.fit li{padding:7px 0 7px 26px;position:relative;font-size:.97rem}
+.fit li::before{content:"";position:absolute;left:0;top:16px;width:12px;height:2px;background:var(--acc)}
 
-    /* NAV (IDENTICAL) */
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 60px;
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-    }
+details{border-top:1px solid var(--edge);transition:background .3s}
+details:last-child{border-bottom:1px solid var(--edge)}
+details[open]{background:linear-gradient(90deg,rgba(255,255,255,.05),transparent)}
+summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:54px 1fr 32px;gap:14px;align-items:center;padding:26px 8px 26px 0}
+summary::-webkit-details-marker{display:none}
+summary:hover h3{color:var(--acc)}
+summary .n{font:800 1.5rem var(--head);color:var(--acc);opacity:.9}
+summary h3{margin:0;font-size:1.25rem;transition:color .2s}
+summary::after{content:"+";font:400 2rem/1 var(--head);color:var(--soft);text-align:center;transition:transform .3s,color .3s}
+details[open] summary::after{transform:rotate(45deg);color:var(--acc)}
+.body{padding:0 40px 30px 68px;animation:in .4s ease}
+@keyframes in{from{opacity:0;transform:translateY(-8px)}}
+.body p{margin:0 0 .9em;color:var(--txt)}
+.body .get{display:flex;gap:12px;align-items:baseline;padding:14px 18px;border-radius:12px;background:var(--glass);border:1px solid var(--edge);font-size:.95rem;color:var(--soft)}
+.body .get b{font:700 .78rem var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--acc);white-space:nowrap}
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .brand img { height: 70px; }
-
-    .brand-name {
-      font-size: 24px;
-      font-weight: 700;
-    }
-
-    .tagline {
-      font-size: 12px;
-      color: #6b7280;
-    }
-
-    .nav a {
-      margin-left: 26px;
-      text-decoration: none;
-      color: #374151;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-
-    .nav a:hover {
-      color: #111827;
-      border-bottom: 2px solid #111827;
-      padding-bottom: 2px;
-    }
-
-    /* BANNER */
-    .banner {
-      height: 260px;
-      background: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-    }
-
-    /* CONTAINER */
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 60px;
-      background: white;
-    }
-
-    h1 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-top: 35px;
-    }
-
-    .sub {
-      margin-top: 10px;
-      color: #6b7280;
-      font-size: 15px;
-    }
-
-    .section {
-      margin-top: 30px;
-    }
-
-  </style>
+.start{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--edge);border-radius:24px;overflow:hidden;margin-top:44px}
+.start div{padding:34px 32px;background:var(--glass)}
+.start div+div{border-left:1px solid var(--edge)}
+.start em{font:800 .9rem var(--head);font-style:normal;color:var(--gold);letter-spacing:.1em}
+.start h3{margin:.4em 0 .4em}
+.start p{margin:0;color:var(--soft);font-size:.97rem}
+@media (max-width:900px){
+  .split,.start{grid-template-columns:1fr;gap:30px}
+  .side{position:static}
+  .start div+div{border-left:0;border-top:1px solid var(--edge)}
+  .body{padding:0 8px 26px 0}
+  summary{grid-template-columns:40px 1fr 28px}
+  .shero{padding:70px 0 76px}
+  .body .get{flex-direction:column;gap:4px}
+}
+.brand img{height:70px;width:auto;display:block}
+</style>
 </head>
-
 <body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html"><img src="logo/logo-horizontal-white.svg" alt="Sent Risk Advisory"></a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="about.html">About</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="brand">
-    <img src="logo.png">
+<main>
+<div class="phero shero">
+  <div class="wrap">
+    <span class="kicker">Services</span>
+    <h1>Advice for the risks you carry, and the ones you are about to take on.</h1>
+    <p>Two practices for businesses that own assets, employ people and trade across borders. Use either on its own, or both together.</p>
+    <div class="jump"><a class="ji" href="#insurance">Corporate Insurance Advisory</a><a class="jt" href="#trade">Export and Import Advisory</a></div>
+  </div>
+</div>
+
+<section class="ins" id="insurance" aria-labelledby="i1">
+  <div class="wrap split">
+    <div class="side">
+      <span class="badge">Practice one</span>
+      <h2 id="i1">Corporate Insurance Advisory</h2>
+      <p class="lead">We work out how your business could lose money, then design and place insurance that responds to it. We advise across insurers, so the recommendation follows your needs and not a single product range.</p>
+      <ul class="fit"><small>Often suits</small>
+        <li>Manufacturers and plant operators</li>
+        <li>Contractors and project businesses</li>
+        <li>Employers with a growing workforce</li>
+        <li>Businesses renewing without a review</li>
+      </ul>
+    </div>
     <div>
-      <div class="brand-name">Sent Risk Advisory</div>
-      <div class="tagline">Engineering Critical Decisions</div>
+      <details open><summary><span class="n">01</span><h3>Risk assessment</h3></summary><div class="body"><p>We walk through your operations, premises and contracts to map where a loss could arise and how large it could be, including the less obvious dependencies such as a single supplier or a single site.</p><div class="get"><b>You receive</b>A written exposure map, ranked by likelihood and impact.</div></div></details>
+      <details><summary><span class="n">02</span><h3>Insurance programme design</h3></summary><div class="body"><p>We decide which classes of cover you need, at what limits and deductibles, and how the policies fit together, covering property and business interruption, engineering, liability, marine and employee benefits.</p><div class="get"><b>You receive</b>A recommended programme with the reasoning behind each class.</div></div></details>
+      <details><summary><span class="n">03</span><h3>Insurer evaluation and placement</h3></summary><div class="body"><p>We approach insurers and compare terms well beyond premium: claims conduct, financial strength, underwriting appetite and wording. We then negotiate and place the cover you choose.</p><div class="get"><b>You receive</b>A side-by-side comparison, a clear recommendation and placement of the chosen cover.</div></div></details>
+      <details><summary><span class="n">04</span><h3>Policy review</h3></summary><div class="body"><p>We read your existing policies line by line against how your business actually operates, looking for exclusions, under-insurance, duplicated cover and conditions you may be failing to meet.</p><div class="get"><b>You receive</b>A gap and exclusion report with specific fixes.</div></div></details>
+      <details><summary><span class="n">05</span><h3>Claims advisory and support</h3></summary><div class="body"><p>We help assemble the claim, interpret the policy and keep the insurer and surveyor on schedule, so that a loss does not turn into a long dispute over paperwork.</p><div class="get"><b>You receive</b>Documented submissions and follow-up through to settlement.</div></div></details>
+      <details><summary><span class="n">06</span><h3>Renewals and ongoing management</h3></summary><div class="body"><p>We review your exposure ahead of each renewal and whenever you add sites, products or markets, so that your cover moves with the business.</p><div class="get"><b>You receive</b>A renewal strategy and timely updates to your programme.</div></div></details>
     </div>
   </div>
+</section>
 
-  <div>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+<section class="trd" id="trade" aria-labelledby="t1">
+  <div class="wrap split">
+    <div class="side">
+      <span class="badge">Practice two</span>
+      <h2 id="t1">Export and Import Advisory</h2>
+      <p class="lead">Trading across borders raises documentation, contract and risk questions that domestic business never faces. We help you enter new markets and run repeat shipments with those questions answered in advance.</p>
+      <ul class="fit"><small>Often suits</small>
+        <li>First-time exporters</li>
+        <li>Exporters entering new markets</li>
+        <li>Importers sourcing from new suppliers</li>
+        <li>Businesses moving from occasional to regular shipments</li>
+      </ul>
+    </div>
+    <div>
+      <details open><summary><span class="n">01</span><h3>Trade readiness and market entry</h3></summary><div class="body"><p>We test your product, pricing, compliance position and capacity before you commit money to a market, and we help you choose where to start and how to structure the first transaction.</p><div class="get"><b>You receive</b>A readiness assessment and a shortlist of target markets.</div></div></details>
+      <details><summary><span class="n">02</span><h3>Documentation guidance</h3></summary><div class="body"><p>We explain which documents each shipment needs and check that they agree with one another, since small mismatches in descriptions, values or quantities are a common cause of delay.</p><div class="get"><b>You receive</b>Document checklists and a review of your shipping paperwork.</div></div></details>
+      <details><summary><span class="n">03</span><h3>Regulatory and compliance guidance</h3></summary><div class="body"><p>We orient you on the rules that apply to your product and route, and we tell you plainly when a licensed customs broker or legal adviser is required.</p><div class="get"><b>You receive</b>A plain-language summary of requirements, with referral where needed.</div></div></details>
+      <details><summary><span class="n">04</span><h3>Contracts and Incoterms</h3></summary><div class="body"><p>We help you choose delivery terms that suit your product and appetite for risk, and align payment and acceptance terms, so that it is clear who pays for what and who carries the risk at each stage.</p><div class="get"><b>You receive</b>Advice on contract terms and a clear map of where risk passes.</div></div></details>
+      <details><summary><span class="n">05</span><h3>Logistics coordination</h3></summary><div class="body"><p>We help set up and coordinate freight forwarders, transporters and customs agents under one plan, with responsibilities defined at every handover.</p><div class="get"><b>You receive</b>A defined shipment plan with named responsibilities.</div></div></details>
+      <details><summary><span class="n">06</span><h3>Cargo and trade risk cover</h3></summary><div class="body"><p>We arrange marine cargo and transit insurance matched to your sale terms, placed through our insurance practice, with insured values and descriptions that agree with your documents.</p><div class="get"><b>You receive</b>Cover aligned with your contracts, and support if goods are lost or damaged.</div></div></details>
+    </div>
   </div>
-</div>
+</section>
 
-<!-- BANNER -->
-<div class="banner"></div>
-
-<!-- CONTENT -->
-<div class="container">
-
-  <h1>Services</h1>
-
-  <p class="sub">
-    Our services are structured around a comprehensive understanding of risk, insurance design and long-term coverage alignment.
-    We approach insurance as an integrated framework combining exposure identification, policy structuring, insurer evaluation and ongoing program management.
-  </p>
-
-  <p class="sub">
-    Each engagement is designed to ensure that coverage reflects actual business exposure, contractual obligations and financial impact,
-    while maintaining efficiency in premium deployment and continuity in protection.
-  </p>
-
-  <!-- CORPORATE -->
-  <div class="section">
-    <h2>Corporate Insurance</h2>
-
-    <p class="sub">
-      Corporate insurance requires a structured approach integrating property, engineering, marine, liability and employee benefits coverage aligned with operational exposure and contractual obligations.
-    </p>
-
-    <p class="sub">
-      We structure coverage through appropriate sum insured determination, policy wording alignment and optimisation of deductibles to ensure clarity and effectiveness in claims.
-    </p>
+<section class="together" aria-labelledby="g1">
+  <div class="wrap">
+    <div class="center">
+      <h2 id="g1">How an engagement begins</h2>
+      <p class="lead">Three steps, whichever practice you start with.</p>
+    </div>
+    <div class="start">
+      <div><em>STEP 01</em><h3>A conversation</h3><p>You tell us about your business, what worries you and what is coming next.</p></div>
+      <div><em>STEP 02</em><h3>A written scope</h3><p>We propose what we will do, what you will receive and how long it will take.</p></div>
+      <div><em>STEP 03</em><h3>The work</h3><p>We carry out the assessment or advisory, explain our reasoning and stay on for renewals and claims.</p></div>
+    </div>
   </div>
+</section>
 
-  <!-- RISK -->
-  <div class="section">
-    <h2>Risk Advisory</h2>
-
-    <p class="sub">
-      Our advisory focuses on identification and evaluation of risk across assets, operations and liabilities including business interruption and liability exposure.
-    </p>
-
-    <p class="sub">
-      This enables structured decision-making and alignment between actual exposure and insurance coverage.
-    </p>
+<section class="final">
+  <div class="wrap">
+    <h2>Not sure which service you need?</h2>
+    <p>Describe your business and we will suggest where to start.</p>
+    <a class="btn" href="contact.html">Contact us</a>
   </div>
+</section>
+</main>
 
-  <!-- SME -->
-  <div class="section">
-    <h2>SME Insurance Solutions</h2>
-
-    <p class="sub">
-      SMEs require scalable insurance frameworks that balance cost efficiency with adequate protection across operational and financial risks.
-    </p>
-
-    <p class="sub">
-      We ensure structured coverage that supports growth while avoiding fragmented and inefficient insurance arrangements.
-    </p>
+<footer>
+  <div class="wrap">
+    <div><b>Sent Risk Advisory</b><p style="margin:2px 0 10px;color:#FFB400;font:700 .74rem Manrope,Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase">Engineering Critical Decisions</p><p>Operating under Sathya Axis Enterprises</p><p>Level 3, Nirvanaz, Road No. 36, Jubilee Hills, Hyderabad 500033 &middot; <a href="tel:+916304128122">+91 6304 128 122</a> &middot; <a href="mailto:services@sent.co.in">services@sent.co.in</a></p><p><a href="index.html">Home</a> &middot; <a href="services.html">Services</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></p></div>
+    <p>Insurance is the subject matter of solicitation. Coverage is subject to the terms, conditions and exclusions of the policy issued by the insurer. Export and import advisory is guidance and does not replace licensed customs brokers, freight forwarders or legal advisers where the law requires them.</p>
   </div>
-
-  <!-- PERSONAL -->
-  <div class="section">
-    <h2>Personal Insurance</h2>
-
-    <p class="sub">
-      Personal insurance is structured around long-term financial protection including life cover, health insurance, retirement planning and education planning.
-    </p>
-
-    <p class="sub">
-      The focus remains on ensuring stability, continuity and alignment with future financial objectives.
-    </p>
-  </div>
-
-</div>
-
+</footer>
 </body>
 </html>
